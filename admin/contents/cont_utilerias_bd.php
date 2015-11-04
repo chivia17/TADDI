@@ -14,17 +14,18 @@
 					
 		</form>
 		<hr>
-		<form action="./contents/uploader.php" method="post" enctype="multipart/form-data"> 
-   			 
-   			<input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
-   			<br> 
-   			<br> 
-   			<b>Enviar un nuevo archivo: </b> 
-   			<br> 
-   			<input name="userfile" type="file"> 
-   			<br> 
-   			<input type="submit" value="Enviar"> 
+		<form class="form-horizontal" action="./contents/uploader.php" method="post" enctype="multipart/form-data"> 
+   			<div class="form-group">
+   				<br>
+				<label for="cargarBD" class="col-sm-4 control-label">Cargar base de datos</label>
+				<div class="col-sm-offset-2 col-sm-6">
+      				<input type="hidden" name="MAX_FILE_SIZE" value="1000000"> 
+   					<input name="userfile" type="file">
+   					<button type="submit" class="btn btn-default">cargar</button>
+    			</div>
+			</div> 
 			</form>
+		<hr>
 		<form class="form-horizontal" action="./contents/cargabd.php">
 			<div class="form-group">
 				<label for="restaurarBD" class="col-sm-4 control-label">Restaurar base de datos</label>

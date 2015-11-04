@@ -7,8 +7,8 @@
 
 	if ($result->num_rows > 0) {
 	 while ($row = $result->fetch_assoc()) {
-			 $html .= '<option value="'.$row['id'].'">'.$row['nombre'].'</option>';
+			 $html .= '<option value="'.$row['nombre'].'">'.$row['nombre'].'</option>';
 	 }
-  }
+}
 echo $html;
 ?>

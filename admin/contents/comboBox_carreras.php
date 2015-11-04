@@ -5,12 +5,12 @@ function conectar2(){//No debe ser variable de conexion mysqli
         	$basedatos = "mydb";
         	$usuario = "root";
         	$contrasena = "";
- 
+
 	        $conexion = new PDO("mysql:host=$servidor;dbname=$basedatos",
                             $usuario,
                             $contrasena,
                             array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
- 
+
     	    $conexion->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         	return $conexion;
     	}catch (PDOException $e){
@@ -27,13 +27,13 @@ function conectar2(){//No debe ser variable de conexion mysqli
         if(!$sentencia->execute()){
             print_r($sentencia->errorInfo());
         }
-        $resp = $sentencia->fetchAll();        
+        $resp = $sentencia->fetchAll();
         $sentencia->closeCursor();
     	}
     	catch(PDOException $e){
         	echo "Error al ejecutar la sentencia: \n";
             print_r($e->getMessage());
-    	} 
+    	}
     return $resp;
 	}
     function getTutores(){
@@ -46,13 +46,13 @@ function conectar2(){//No debe ser variable de conexion mysqli
         if(!$sentencia->execute()){
             print_r($sentencia->errorInfo());
         }
-        $resp = $sentencia->fetchAll();        
+        $resp = $sentencia->fetchAll();
         $sentencia->closeCursor();
         }
         catch(PDOException $e){
             echo "Error al ejecutar la sentencia: \n";
             print_r($e->getMessage());
-        } 
+        }
     return $resp;
     }
 
@@ -66,13 +66,13 @@ function conectar2(){//No debe ser variable de conexion mysqli
         if(!$sentencia->execute()){
             print_r($sentencia->errorInfo());
         }
-        $resp = $sentencia->fetchAll();        
+        $resp = $sentencia->fetchAll();
         $sentencia->closeCursor();
         }
         catch(PDOException $e){
             echo "Error al ejecutar la sentencia: \n";
             print_r($e->getMessage());
-        } 
+        }
     return $resp;
     }
 

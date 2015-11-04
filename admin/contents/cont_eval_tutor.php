@@ -12,7 +12,7 @@ require_once("comboBox_carreras.php");
 			<div class="form-group">
 				<label for="selectCarrera" class="col-sm-2 control-label">Carrera</label>
 				<div class="col-sm-10">
-  					<select id="selectCarrera" name="selectCarrera" class="form-control">
+  					<select required id="selectCarrera" name="selectCarrera" class="form-control">
    						<option value="">Seleccion Carrera</option>
 							<?php
 								$carreras=getCarreras();
@@ -26,7 +26,7 @@ require_once("comboBox_carreras.php");
 			<div class="form-group">
 				<label for="selectTutor" class="col-sm-2 control-label">Tutor</label>
 				<div class="col-sm-10">
-  					<select name="selectTutor" class="form-control" id="selectTutor">
+  					<select required name="selectTutor" class="form-control" id="selectTutor">
   					</select>
 				</div>
 			</div>

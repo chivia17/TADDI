@@ -1,0 +1,36 @@
+#background_login{
+	background-color: #666798;
+	width: 100%;
+	min-height: 500px;
+	height: auto;
+	align-content: center;
+}
+
+#sesion-coor{
+	background-color: #89375f;
+	color: #fff;
+	height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.cabecera_fixed{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: 80px;
+	z-index: 130;
+	background-color: #efefef;
+	padding-left: 30px;
+	padding-top: 5px;
+}
+
+#info_user{
+	font-family: HelveticaNeue;
+	font-size: 16px;
+	color: #999999;
+	background-color: #fff;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #d9d9d9;
+}

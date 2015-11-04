@@ -6,7 +6,13 @@
         <h4 class="modal-title">Cambiar contraseña</h4>
       </div>
       <div class="modal-body">
-		<form class="form-horizontal" action="" method="post" onsubmit="return validar_changePsw();">
+		<form class="form-horizontal" action="modals/cambiar_contrasena.php" method="post" onsubmit="return validar_changePsw();">
+			<div class="form-group">
+				<label for="pswAct" class="col-sm-4 control-label">RFC</label>
+				<div class="col-sm-6">
+			  		<input type="input" class="form-control" id="passrfc" name="passrfc" required>
+				</div>
+		  	</div>
 		  	<div class="form-group">
 				<label for="pswAct" class="col-sm-4 control-label">Contraseña actual</label>
 				<div class="col-sm-6">

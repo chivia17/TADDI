@@ -10,43 +10,50 @@
 		<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<header id="header">
-			<img src="./img/nav_tadii2.png" class="img-responsive" alt="">
-		</header><br><br>        	
+		<header class="cabecera">
+			<div class="row">
+				<div class="col-xs-3 col-sm-5 col-md-8">
+					<img src="./img/logoTec.png" class="img-responsive">
+				</div>
+				<div class="col-xs-9 col-sm-7 col-md-4">
+					<img src="./img/tadii.png" class="img-responsive">
+				</div>
+			</div>
+		</header><br><br>
         <div class="container">
         	<div class="row">
         		<div class="col-lg-6">
         			<button class="btn_users" id="btn_tutorado">
-        				<img src="./img/tutorado_120.png"><br><br>     	
+        				<img src="./img/tutorado_120.png"><br><br>
         				<p>TUTORADO</p>
         			</button>
         		</div>
-        	
+
         		<div class="col-lg-6">
-        			<button class="btn_users" id="btn_coordinador">
-        				<img src="./img/coordinador_120.png"><br><br>     	
+        			<button class="btn_users" id="btn_coordinador" onclick = "location='./coordinador/login.php'">
+        				<img src="./img/coordinador_120.png"><br><br>
         				<p>COORDINADOR</p>
         			</button>
         		</div>
       		</div>
-      	
+
       		<div class="row">
         		<div class="col-lg-6">
         			<button class="btn_users" id="btn_tutor">
-        				<img src="./img/tutor_120.png"><br><br>     	
+        				<img src="./img/tutor_120.png"><br><br>
         				<p>TUTOR</p>
         			</button>
         		</div>
         		<div class="col-lg-6">
-        			<button class="btn_users" id="btn_admin" onclick = "location='./admin/index.php'">
-        				<img src="./img/admin_150.png"><br><br>     	
+        			<button class="btn_users" id="btn_admin" onclick = "location='./admin/login.php'">
+        				<img src="./img/admin_150.png"><br><br>
         				<p>ADMINISTRADOR</p>
         			</button><br><br><br>
         		</div>
-        		
+
       		</div>
       	</div>
-      	
+
      	<footer>
      		<div id="footer">
 				<p class="text-right text-muted">

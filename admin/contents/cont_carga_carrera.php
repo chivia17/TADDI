@@ -11,8 +11,8 @@ require_once("comboBox_carreras.php");
   			<div class="form-group">
 				<label for="selectCarrera" class="col-sm-2 control-label">Carrera</label>
 				<div class="col-sm-8">
-  					<select name="cveCarrera" class="form-control cboton">    
-   					    		<option name="">-Seleccione una carrera-</option>
+  					<select required name="cveCarrera" class="form-control cboton">    
+   					    		<option value="" name="">-Seleccione una carrera-</option>
    					    		<?php
                     $a=actC();
                     function actC(){
@@ -28,7 +28,7 @@ require_once("comboBox_carreras.php");
 			<div class="form-group">
 				<label for="selectPeriodo" class="col-sm-2 control-label">Grupo</label>
 				<div class="col-sm-4">
-  					<select name="idGrupos" class="form-control cboton2">    
+  					<select required name="idGrupos" class="form-control cboton2">    
    						<option value="">-Seleccione un grupo-</option>   						
   					</select>
 				</div>

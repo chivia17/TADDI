@@ -10,7 +10,6 @@
 	  				<div class="panel-heading">Coordinadores</div>
 	 					<table class="table">
 	 						<tr>
- 								<td><strong>Id</strong></td>
   								<td><strong>Nombre</strong></td>
  								<td><strong>RFC</strong></td>
 								<td><strong>Carrera</strong></td>
@@ -23,8 +22,6 @@
 	             while($row = mysqli_fetch_array($result))
 	             {
 	              echo "<tr><td width=\"25%\"><font face=\"verdana\">" .
-		            $row["idCoordinador"] . "</font></td>";
-	              echo "<td width=\"25%\"><font face=\"verdana\">" .
 		            $row["nombre"] . "</font></td>";
 								echo "<td width=\"25%\"><font face=\"verdana\">" .
 								$row["rfc"] . "</font></td>";

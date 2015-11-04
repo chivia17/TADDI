@@ -13,8 +13,8 @@
 				  <div class="form-group">
 				    <label for="sele" class="col-md-2 control-label">Tutor</label>
 				    <div class="col-md-6">
-				       <select name="idTutores" class="form-control">
-				       		<option name="a">-Selecciona un tutor-</option>	
+				       <select required name="idTutores" class="form-control">
+				       		<option value="" name="a">-Selecciona un tutor-</option>	
 				       		<?php
         							$carreras=getTutores();
         							foreach ($carreras as $indice => $registro) {
@@ -44,25 +44,26 @@
 								$sql="call tutClave('$nTutores')";	
 									$resp = $conexion->query($sql);
 									if(!$resp){
+										echo "No hay conexion";
 									}
 									else{
 
 									if ($resp->num_rows > 0) {
 										echo "<div class=\"form-group\">
-				<div class=\"panel panel-success\">
-	  				<div class=\"panel-heading\">Informe de tutor</div>	 					
-				</div>
-			</div>";
+										<div class=\"panel panel-success\">
+	  									<div class=\"panel-heading\">Informe de tutor</div>	 					
+										</div>
+										</div>";
 								    // output data of each row
 									echo "<table class='table'>
 	 								<tr>
- 									<td><strong>Id</strong></td>
+ 									<td><strong>RFC</strong></td>
   									<td><strong>Nombre</strong></td>
  									<td><strong>Carrera</strong></td>
 								</tr>";
 								  					
 								    	while($row = $resp->fetch_assoc()) {
-								        	echo "<tr><td width=\"25%\"><font face=\"verdana\">" .
+								        	echo "<td width=\"25%\"><font face=\"verdana\">" .
 		            						$row["ID"] . "</font></td>";
 	              							echo "<td width=\"25%\"><font face=\"verdana\">" .
 		            						$row["Nombre"] . "</font></td>";
@@ -71,7 +72,7 @@
 								    	}
 								    	echo "</table>";
 									} else {
-								    	echo "0 results";
+								    	echo "0 results $nTutores";
 									}	
 									$conexion->close();
 								}

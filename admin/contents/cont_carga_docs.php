@@ -4,13 +4,13 @@
 	</div>
 	<div class="container">
 		<br>
-		<form class="form-horizontal" action="" method="">
-  			<div class="form-group">
+		<form class="form-horizontal" action="./contents/cargarArchivo.php" method="POST" enctype="multipart/form-data">
+  			<!--div class="form-group">
     			<label for="txtDesc" class="col-sm-2 control-label">Descripción</label>
     			<div class="col-sm-10">
       				<input type="text" class="form-control" name="textDesc">
     			</div>
-  			</div>
+  			</div-->
   			<div class="form-group">
 				<label for="fileDoc" class="col-sm-2 control-label">Documento a cargar</label>
 				<div class="col-sm-10">
@@ -20,9 +20,9 @@
 							<span class="fileinput-filename"></span>
 						</div>
 						<span class="input-group-addon btn btn-default btn-file">
-							<span class="fileinput-new">Seleccionar documento</span>
+							<span class="fileinput-new" >Seleccionar documento</span>
 							<span class="fileinput-exists">Cambiar</span>
-							<input type="file" name="fileDoc">
+							<input required type="file" name="userfile" id="userfile">
 						</span>
 						<a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
 					</div>
