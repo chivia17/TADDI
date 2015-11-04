@@ -1,0 +1,111 @@
+@font-face { 
+	font-family: HelveticaNeue; 
+	src: url("../fonts/HelveticaNeueLTStd-LtCn.otf") format("truetype");
+	font-weight: normal;
+}
+
+body{
+	font-family: HelveticaNeue;
+}
+
+.cabecera{
+	background: #f3f3f3;
+	padding-left: 30px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#header{
+	width: auto;
+	background-color: #f3f3f3;
+}
+
+#tadii{
+	height: 455px;
+}
+
+#footer{
+	font-size: 14px;
+	font-family: HelveticaNeue;
+	height: 100px;
+	background-color: #f3f3f3;
+}
+
+#btn_ingresar{
+	background-color: #efefef;
+	border: none;
+	color: #999;
+	
+	font-family: HelveticaNeue;
+}
+
+
+#nav_tadii{
+	font-family: HelveticaNeue;
+	font-size: 26px;
+}
+
+#logoITM{
+	padding: 10px;
+}
+
+.btn_users{
+	height: 200px;
+	width: 450px;
+	border: none;
+	border-radius: 20px;
+	margin: 10px;
+	color: #fff;
+	font-family: HelveticaNeue;
+	font-size: 18px;
+}
+
+#btn_tutorado{
+	background-color: #33c6a5;
+}
+
+#btn_tutor{
+	background-color: #004e63;
+}
+
+#btn_coordinador{
+	background-color: #666798;
+}
+
+#btn_admin{
+	background-color: #999;
+}
+
+
+#admin_bg{
+	height: 505px;
+	background-color: #999;
+}
+
+#configUser{
+	border: none;
+	background-color: none;
+}
+
+#info_user{
+	font-family: HelveticaNeue;
+	font-size: 16px;
+	color: #999;
+	position: relative;
+	z-index: 10;
+	background-color: #fff;
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: #d9d9d9;
+}
+
+#content{
+	height: 700px;
+}
+
+.btn-menu{
+	border: none;
+	background: none;
+	height: 40px;
+}
+

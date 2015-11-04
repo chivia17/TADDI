@@ -1,0 +1,79 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.42857143;
+  color: #333;
+}
+
+header {
+  position: relative;
+  /*top: 0;
+  left: 0;*/
+  z-index: 130;
+  width: 100%;
+  height: auto;
+  background-color: #efefef;
+  
+}
+
+.wrapper_info{
+	position: relative;
+	z-index: 110;
+  	padding: 0px;
+  	transition: all 0.3s ease-out;
+}
+
+.wrapper {
+  /*margin-top: 50px;*/
+	position: relative;
+	z-index: 90;
+  	padding: 0px;
+  	transition: all 0.3s ease-out;
+  	height: 550px;
+}
+
+
+
+/* Small devices (tablets)
+==========================*/
+@media (min-width: 768px) {
+
+}
+
+/*@media (max-width: 991px) {
+	#info_user{
+		padding-left: 200px;
+	}
+}*/
+
+/* Medium devices (desktops)
+==========================*/
+@media (min-width: 992px) {
+
+  body {
+    overflow-y: scroll;
+  }
+
+  .logo img {
+    width: 200px;
+    text-align: center;
+    margin-top: 10px;
+    float: none;
+  }
+
+  .wrapper {
+    margin-left: 200px;
+  }
+
+  .wrapper__minify {
+    margin-left: 50px;
+  }
+
+	
+
+}
