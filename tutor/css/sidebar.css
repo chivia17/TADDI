@@ -24,10 +24,6 @@
   	cursor: pointer; 
 }
 
-.icons{
-	display: none;
-}
-
 .toggle_menu i {
 	display:block;
 	font-size: 18px; 

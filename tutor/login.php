@@ -28,7 +28,7 @@ else{
 							<span class="glyphicon glyphicon-arrow-left"></span>
 						</button>
 					</div>
-				</div>
+				</div> 
 			</div>
 			<div class="row">
 				<div id="login_wrapper">
@@ -38,7 +38,7 @@ else{
 						<input class="form-control" id="userc" type="text" placeholder="Usuario">
 						<input class="form-control" id="passc" type="password"  placeholder="Contraseña">
 						<br>
-						<input class="btn btn-block" id="sesion-coor" type="submit" value="Iniciar sesión">
+						<input class="btn btn-block" id="sesion-tutor" type="submit" value="Iniciar sesión">
 					</form>
 				</div>
 			</div>

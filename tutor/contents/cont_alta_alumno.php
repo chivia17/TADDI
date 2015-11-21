@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="titulo text-center">
-		<h2><b>BAJA ALUMNO</b></h2>
+		<h2><b>ALTA ALUMNO</b></h2>
 	</div>
 </div>
 
@@ -39,7 +39,23 @@
 				</tr>
 	  		</table>
 		</div>
-		<br><br>
-		<button type="submit" class="btn btn-default btn-block">Dar de baja</button>
 	</div>
+	<hr>
+	<br>	
+	<div class="row">
+		<div class="form-horizontal">
+  			<div class="form-group">
+    			<label for="nvoGrupo" class="col-sm-2 control-label">Nuevo grupo</label>
+    			<div class="col-sm-7">
+	      			<select name="nvoGrupo" class="form-control" id="nvoGrupo">
+                		<option>--Selecciona grupo--</option>
+  					</select>
+    			</div>
+    			<div class="col-sm-2">
+      				<button type="submit" class="btn btn-default btn-block">Cambiar</button>
+    			</div>
+  			</div>
+		</div>
+	</div>	
 </form>
+
