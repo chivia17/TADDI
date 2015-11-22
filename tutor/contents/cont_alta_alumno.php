@@ -51,9 +51,8 @@ $cve = $_SESSION["rfc"];
 	 		<table class="table" id="table1">
 	  		</table>
 		</div>
-		<div class="col-sm-2">
-					<button type="button" class="btn btn-default btn-block" id="alta">Alta</button>
-			</div>
+    <br><br>
+		<button type="submit" class="btn btn-default btn-block" id="alta">Dar de Alta</button>
 	</div>
 	<hr>
 	<br>

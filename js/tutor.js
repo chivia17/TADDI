@@ -33,6 +33,16 @@ $(document).ready(main);
         });
      });
 
+     $('#bus').click(function(){        //Buscar alumno Baja logica Alumno
+       $nc= $('#noControl').val();
+       $gp= $('#grupo').val();
+      var query = "SELECT * FROM alum WHERE idAlumnos="
+      +$nc+" AND activo = 1 AND idGrupos ="+$gp;
+       $.post("./contents/tabla_alumno.php", { query: query}, function(data){
+            $("#table1").html(data);
+        });
+     });
+
 
      $('#alta').click(function(){            //Alta logica Alumno
         var nc= $('#noControl').val();
@@ -40,6 +50,19 @@ $(document).ready(main);
         $.ajax({
          type: "POST",
          url: "./contents/altaLog.php",
+         data: parametros,
+         success: function(data){
+                alert(data);
+       }});
+
+     });
+
+     $('#baja').click(function(){            //Baja logica Alumno
+        var nc= $('#noControl').val();
+        var parametros = {"nc" : nc};
+        $.ajax({
+         type: "POST",
+         url: "./contents/bajaLog.php",
          data: parametros,
          success: function(data){
                 alert(data);
