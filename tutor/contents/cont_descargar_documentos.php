@@ -9,25 +9,17 @@
 			<div class="form-group">
 				<div class="panel panel-success">
 	  				<div class="panel-heading">Documentos</div>
-	 					<table class="table">
-							<tr>
- 								<td><strong>Documento</strong></td>
-  								<td><strong>Descripción</strong></td>
-  								<td class="text-center"><strong>Ver</strong></td>
-  								<td class="text-center"><strong>Descargar</strong></td>
-							</tr>
-							<tr>
-							  <td></td>
-							  <td></td>
-							  <td class="text-center"><a href=""><span class="glyphicon glyphicon-eye-open"></span></a></td>
-							  <td class="text-center"><a href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
-							</tr>
-							<tr>
-							  <td></td>
-							  <td></td>
-							  <td class="text-center"><a href=""><span class="glyphicon glyphicon-eye-open"></span></a></td>
-							  <td class="text-center"><a href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
-							</tr>
+	 					<table class="table" id="tableArchivos">
+	 						<tr><td><strong>Documento</strong></td><td><strong>Descripción</strong></td><td class="text-center"><strong>Ver</strong></td><td class="text-center"><strong>Descargar</strong></td></tr>
+	 						<?php
+	 						$dir="../contents/Archivos/*";
+	 						foreach (glob($dir) as $filename) {
+	 							$aux="$filename";
+	 							$aux = substr($aux, 21); 
+    							echo "<tr><td>$aux</td><td>".filesize($filename)."</td><td class=text-center><a href=$filename>Ver</a></td><td class=text-center><a href=$filename download=$aux>Descargar</a></td></tr>";
+	
+								}
+	 						?>
 	  					</table>
 				</div>
 			</div>
