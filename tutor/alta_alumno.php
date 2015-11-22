@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<?php include "./includes/head.html"; ?>
@@ -13,4 +16,4 @@
 		<?php include "./modals/modalPsw.php"; ?>
 		<?php include "./includes/footer.html"; ?>
 	</body>
-</html> 
+</html>
