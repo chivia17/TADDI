@@ -1,3 +1,6 @@
+<?php
+$cve = $_SESSION["rfc"];
+ ?>
 <div class="row">
 	<div class="titulo text-center">
 		<h2><b>CARGA POR TUTORÍA</b></h2>
@@ -15,18 +18,24 @@
   					<td><strong>Salón</strong></td>
   					<td class="text-center"><strong>Lista</strong></td>
 				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="text-center"><a href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="text-center"><a href=""><span class="glyphicon glyphicon-download-alt"></span></a></td>
-				</tr>
+				<?php
+				include'conexion.php';
+				$conexion = conectar();
+				$query = "SELECT NombreGrupo, Hora, Salon FROM grupos WHERE idTutores='$cve'" or die("Error in the consult.." . mysqli_error($conexion));
+				$result = $conexion->query($query);
+				while($row = mysqli_fetch_array($result))
+				{
+				 echo "<tr><td width=\"20%\"><font face=\"verdana\">" .
+				 $row["NombreGrupo"] . "</font></td>";
+				 echo "<td width=\"20%\"><font face=\"verdana\">" .
+				 $row["Hora"] . "</font></td>";
+				 echo "<td width=\"20%\"><font face=\"verdana\">" .
+				 $row["Salon"] . "</font></td>";
+				 echo "	<td class='text-center'>
+         <a href='contents/cargatutoriaPDF.php' download>
+         <span class='glyphicon glyphicon-download-alt'></span></a></td>";
+				 }
+			 ?>
 	  		</table>
 		</div>
 		<br>

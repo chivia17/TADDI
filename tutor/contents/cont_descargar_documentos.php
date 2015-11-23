@@ -15,9 +15,11 @@
 	 						$dir="../contents/Archivos/*";
 	 						foreach (glob($dir) as $filename) {
 	 							$aux="$filename";
-	 							$aux = substr($aux, 21); 
-    							echo "<tr><td>$aux</td><td>".filesize($filename)."</td><td class=text-center><a href=$filename>Ver</a></td><td class=text-center><a href=$filename download=$aux>Descargar</a></td></tr>";
-	
+	 							$aux = substr($aux, 21);
+    							echo "<tr><td>$aux</td><td>".filesize($filename).
+						"</td><td class=text-center><a href=$filename>Ver</a>
+				</td><td class=text-center><a href=$filename download=$aux>Descargar</a>
+									</td></tr>";
 								}
 	 						?>
 	  					</table>
