@@ -2,7 +2,7 @@
 include("../../admin/conexion/conexionMysql.php");
 session_start();
 $rfc = $_SESSION['rfc'];
-	//echo '<script language="javascript">alert("'.$rfc.'");</script>'; 
+echo '<script language="javascript">alert("'.$rfc.'");</script>'; 
 
 //$rfc = "SAHM720522FA4";
 $cont_mail = $_POST["cont_mail"];
@@ -10,9 +10,9 @@ $destinatarios = "";
 
 $conexion = new MySQL();
 $query = $conexion->consulta("SET NAMES 'utf8'");
-$query = $conexion->consulta("SELECT cveCarrera FROM coordinadores WHERE rfc = '".$rfc."'");
+$query = $conexion->consulta("SELECT idGrupos FROM grupos WHERE idTutores = '".$rfc."'");
 $resultado = mysql_fetch_array($query);
-$query = $conexion->consulta("SELECT correo FROM tutores WHERE cveCarrera = '".$resultado["cveCarrera"]."'");
+$query = $conexion->consulta("SELECT correo FROM alumnos WHERE idGrupos = '".$resultado["idGrupos"]."'");
 
 while($row = mysql_fetch_row($query))
 {
