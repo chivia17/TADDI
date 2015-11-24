@@ -14,17 +14,17 @@ $confirmar = $_POST["pswChk"];
 $conexion = new MySQL();
 $query = $conexion->consulta("SET NAMES 'utf8'");
 $query = $conexion->consulta("BEGIN");
-$query = $conexion->consulta("SELECT rfc, contraseña FROM administrador WHERE rfc = '".$usuario."'");
+$query = $conexion->consulta("SELECT rfc, contrasena FROM administrador WHERE rfc = '".$usuario."'");
 $resultado = mysql_fetch_array($query);
 if($usuario == $resultado ["rfc"])
 {
-	if($contrasena == $resultado ["contraseña"])
+	if($contrasena == $resultado ["contrasena"])
 	{
 		if($nva_contrasena == $confirmar)
 		{
-			$query = $conexion->consulta("UPDATE administrador SET contraseña = '".$nva_contrasena."' WHERE rfc = '".$usuario."'");
+			$query = $conexion->consulta("UPDATE administrador SET contrasena = '".$nva_contrasena."' WHERE rfc = '".$usuario."'");
 			$query = $conexion->consulta("COMMIT");
-			echo '<script language="javascript">alert("El cambio de contraseña se ralizó correctamente.");</script>'; 
+			echo '<script language="javascript">alert("El cambio de contraseña se ralizó correctamente.");</script>';
 		}
 		else
 		{
@@ -33,12 +33,12 @@ if($usuario == $resultado ["rfc"])
 	}
 	else
 	{
-		echo '<script language="javascript">alert("Error: Contraseña Incorrecta");</script>'; 
+		echo '<script language="javascript">alert("Error: Contraseña Incorrecta");</script>';
 	}
 }
 else
 {
-	echo '<script language="javascript">alert("Error: Usuario no registrado");</script>'; 
+	echo '<script language="javascript">alert("Error: Usuario no registrado");</script>';
 }
 
 echo '<script language="javascript">window.location.href="../";</script>';

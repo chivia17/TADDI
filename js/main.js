@@ -68,7 +68,6 @@ $(document).ready(main);
 
 
 		 $('#sesion-ad').click(function(){   //Boton login administrador
-			 alert("ssdsd");
 			var us=$("#userc").val();
 	    var pas=$("#passc").val();
 	    $.post("./contents/sesion_ad.php", { us : us , pas : pas }, function(data){
