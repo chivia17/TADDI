@@ -21,10 +21,13 @@ $cve = $_SESSION["rfc"];
 				<?php
 				include'conexion.php';
 				$conexion = conectar();
-				$query = "SELECT NombreGrupo, Hora, Salon FROM grupos WHERE idTutores='$cve'" or die("Error in the consult.." . mysqli_error($conexion));
+				$query = "SELECT idGrupos,NombreGrupo, Hora, Salon FROM grupos WHERE idTutores='$cve'" or die("Error in the consult.." . mysqli_error($conexion));
 				$result = $conexion->query($query);
 				while($row = mysqli_fetch_array($result))
 				{
+         $id=$row["idGrupos"];
+         $hora=$row["Hora"];
+         $salon=$row["Salon"];
 				 echo "<tr><td width=\"20%\"><font face=\"verdana\">" .
 				 $row["NombreGrupo"] . "</font></td>";
 				 echo "<td width=\"20%\"><font face=\"verdana\">" .
@@ -32,7 +35,7 @@ $cve = $_SESSION["rfc"];
 				 echo "<td width=\"20%\"><font face=\"verdana\">" .
 				 $row["Salon"] . "</font></td>";
 				 echo "	<td class='text-center'>
-         <a href='contents/cargatutoriaPDF.php' download>
+         <a href='contents/cargatutoriaPDF.php?id=$id&ho=$hora&sa=$salon' download>
          <span class='glyphicon glyphicon-download-alt'></span></a></td>";
 				 }
 			 ?>
