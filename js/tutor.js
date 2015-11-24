@@ -57,6 +57,7 @@ $(document).ready(main);
 
      });
 
+
      $('#baja').click(function(){            //Baja logica Alumno
         var nc= $('#noControl').val();
         var parametros = {"nc" : nc};
@@ -67,6 +68,16 @@ $(document).ready(main);
          success: function(data){
                 alert(data);
        }});
-
      });
+
+     $('#cam').click(function(){        //Buscar alumno Alta logica Alumno
+       var cv= $('#rfc').val();
+       var cona = $('#pswAct').val();
+       var conn = $('#pswNew').val();
+       var conr = $('#pswChk').val();
+       $.post("./contents/cambCon.php", { cv : cv , conn : conn, conr : conr }, function(data){
+            alert(data);
+        });
+     });
+
 }
