@@ -1,3 +1,6 @@
+<?php
+$cve = $_SESSION["rfc"];
+ ?>
 <div class="contenido container">
 	<div class="titulo text-center">
 		<h2><b>AVISOS</b></h2>

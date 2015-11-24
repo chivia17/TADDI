@@ -7,12 +7,11 @@ $rfc = $_SESSION['rfc'];
 //$rfc = "SAHM720522FA4";
 $cont_mail = $_POST["cont_mail"];
 $destinatarios = "";
-
+$fech = $_POST["datepicker"];
 $conexion = new MySQL();
+$numcont=$_POST["noControl"];
 $query = $conexion->consulta("SET NAMES 'utf8'");
-$query = $conexion->consulta("SELECT idGrupos FROM grupos WHERE idTutores = '".$rfc."'");
-$resultado = mysql_fetch_array($query);
-$query = $conexion->consulta("SELECT correo FROM alumnos WHERE idGrupos = '".$resultado["idGrupos"]."'");
+$query = $conexion->consulta("SELECT correo FROM alumnos WHERE idAlumnos = '".$numcont."'");
 
 while($row = mysql_fetch_row($query))
 {
@@ -23,7 +22,7 @@ if($destinatarios != "")
 {
 	$correo = $destinatarios;
 	$correo = utf8_decode($correo);
-	$asunto = utf8_decode("Aviso de Coordinador");
+	$asunto = utf8_decode("Cita de tutor Fecha=".$fech.".");
 	$mensaje = $cont_mail;
 	$mensaje = str_replace("\n.", "\n..", $mensaje);
 	mail($correo, $asunto, $mensaje);
@@ -31,7 +30,7 @@ if($destinatarios != "")
 }
 else
 {
-	echo '<script language="javascript">alert("No existen tutores asignados");</script>'; 
+	echo '<script language="javascript">alert("No existen Alumnos asignados");</script>'; 
 }
-echo '<script language="javascript">window.location.href="../env_correo.php";</script>'; 
+echo '<script language="javascript">window.location.href="../cita.php";</script>'; 
 ?>
