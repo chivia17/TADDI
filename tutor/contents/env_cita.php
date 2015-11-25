@@ -1,5 +1,5 @@
 <?php
-include("../../admin/conexion/conexionMysql.php");
+include'conexion.php';
 session_start();
 $rfc = $_SESSION['rfc'];
 //echo '<script language="javascript">alert("'.$rfc.'");</script>'; 
@@ -8,16 +8,15 @@ $rfc = $_SESSION['rfc'];
 $cont_mail = $_POST["cont_mail"];
 $destinatarios = "";
 $fech = $_POST["datepicker"];
-$conexion = new MySQL();
+$conexion = conectar();
 $numcont=$_POST["noControl"];
-$query = $conexion->consulta("SET NAMES 'utf8'");
-$query = $conexion->consulta("SELECT correo FROM alumnos WHERE idAlumnos = '".$numcont."'");
+$query = $conexion->query("SET NAMES 'utf8'");
+$resultado = $conexion->query("SELECT correo FROM alumnos WHERE idAlumnos = '".$numcont."'");
 
-while($row = mysql_fetch_row($query))
-{
-	$destinatarios = $destinatarios.",".$row[0];
-	//echo '<script language="javascript">alert("'.$row[0].'");</script>'; 
-}
+while($row = $resultado->fetch_assoc())
+     {
+      $destinatarios=$row["correo"];
+    }
 if($destinatarios != "")
 {
 	$correo = $destinatarios;

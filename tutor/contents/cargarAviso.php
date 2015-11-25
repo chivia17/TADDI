@@ -12,9 +12,12 @@ $tipo_archivo = $_FILES['userfile']['type'];
 $nom=$nombre_archivo+$tipo_archivo;
 $query = $conexion->query("SET NAMES 'utf8'");
 $cvecarrera = $conexion->query("SELECT idGrupos FROM grupos WHERE idTutores = '".$rfc."'");
+while($row = $cvecarrera->fetch_assoc())
+     {
+      $query = "insert into Avisos values('$Aviso','".$row["idGrupos"]."','$nombre_archivo','$fecha');" or die("Error in the consult.." . mysqli_error($conexion));
+      $result = $conexion->query($query);
+    }
 //$fin = mysql_result($cvecarrera, 0);
-$query = "insert into Avisos values('$Aviso','LOFA','$nombre_archivo','$fecha');" or die("Error in the consult.." . mysqli_error($conexion));
-$result = $conexion->query($query);
 //compruebo si las características del archivo son las que deseo
    	
     if($result){

@@ -11,7 +11,7 @@ session_start();
 			<?php include "./includes/info_user.html"; ?>
 		</div>
 		<div class="wrapper">
-
+			<?php include "./contents/cont_colorama.php"; ?>
 		</div>
 		<?php include "./modals/modalPsw.php"; ?>
 		<?php include "./includes/footer.html"; ?>

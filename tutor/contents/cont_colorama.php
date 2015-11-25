@@ -1,23 +1,14 @@
 <?php
 $cve = $_SESSION["rfc"];
  ?>
-<div class="contenido container">
+<div class="row">
 	<div class="titulo text-center">
-		<h2><b>Agendar Cita</b></h2>
+		<h2><b>Colorama</b></h2>
 	</div>
-	<div class="container">
-		<br>
-		<form class="form-horizontal" role="form" method="post" action="contents/env_cita.php">
-			<div class="form-group">
-				<label for="cont_mail" class="col-md-2 control-label">Contenido de Correo:</label>
-				<div class="col-md-6">
-				    <input type="text" class="form-control" id="cont_mail" name="cont_mail" placeholder="Contenido">
-				</div>
-			</div>
-			<div>
-				<label for="cont_fecha" class="col-md-2 control-label">Fecha para la asesoria</label><input id="datepicker" name="datepicker" type="text"/>
-			</div>
-			<br><br>
+</div>
+<br><br>
+<form class="form-horizontal" role="form" action="">
+	<div class="row">
 		<div class="form-horizontal">
   			<div class="form-group">
     			<label for="nvoGrupo" class="col-sm-2 control-label">Grupo</label>
@@ -39,15 +30,11 @@ $cve = $_SESSION["rfc"];
   			</div>
 		</div>
 	</div>
-	<div class="form-group">
+	<div class="row1">
 		<div class="form-horizontal">
 			<div class="form-group">
-				<label for="noControl" class="col-sm-4 control-label">Numero de Control</label>
-				<div class="col-sm-4">
-				    <input type="text" class="form-control" id="noControl" name="noControl" placeholder="Número de control">
-				</div>
 				<div class="col-sm-2">
-      				<button type="button" class="btn btn-default btn-block" id="bus">Buscar</button>
+      				<button type="button" class="btn btn-default btn-block" id="salon">Mostrar</button>
     			</div>
 			</div>
 		</div>
@@ -60,12 +47,7 @@ $cve = $_SESSION["rfc"];
 	 		<table class="table" id="table1">
 	  		</table>
 		</div>
-			<div class="form-group">
-				<div class="col-md-offset-2 col-md-3">
-				    <button type="submit" class="btn btn-default">Enviar</button>
-				</div>
-			</div>
-		</form>
 	</div>
-</div>
-
+	<hr>
+	<br>
+</form>
