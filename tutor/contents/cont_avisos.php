@@ -11,7 +11,7 @@ $cve = $_SESSION["rfc"];
 			<div class="form-group">
 				<label for="cont_aviso" class="col-md-2 control-label">Contenido del aviso:</label>
 				<div class="col-md-6">
-				    <input type="text" class="form-control" id="cont_aviso" name="cont_aviso" placeholder="Contenido">
+				    <input type="text" class="form-control" id="cont_aviso" name="cont_aviso" placeholder="Contenido" required>
 				</div>
 			</div>
 			<div class="form-group">
@@ -25,14 +25,14 @@ $cve = $_SESSION["rfc"];
 						<span class="input-group-addon btn btn-default btn-file">
 							<span class="fileinput-new" >Seleccionar documento</span>
 							<span class="fileinput-exists">Cambiar</span>
-							<input type="file" name="userfile" id="userfile">
+							<input type="file" name="userfile" id="userfile" required>
 						</span>
 						<a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
 					</div>
 				</div>
 			</div>
 			<div>
-				<label for="cont_fecha" class="col-md-2 control-label">Fecha para borrar aviso</label><input id="datepicker" name="datepicker" type="text"/>
+				<label for="cont_fecha" class="col-md-2 control-label">Fecha para borrar aviso</label><input id="datepicker" name="datepicker" type="text" required/>
 			</div>
 			<div class="form-group">
 				<div class="col-md-offset-2 col-md-3">
