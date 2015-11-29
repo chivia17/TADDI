@@ -8,7 +8,7 @@
 				  <div class="form-group">
 				    <label for="seleccar" class="col-md-2 control-label">NC</label>
 						<div class="col-md-2">
-							<input type="text" class="form-control" id="clave" name="clave" placeholder="Clave">
+							<input type="text" class="form-control" id="clave" name="clave" placeholder="Clave" required>
 						</div>
 				  </div>
 				  <div class="form-group">

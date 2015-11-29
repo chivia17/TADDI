@@ -5,7 +5,8 @@
 <div class="contenido container">
 	<div class="titulo text-center">
 		<h2><b>ESTADISTICAS</b></h2>
-	</div>
+	</div> 
+	<!--
 	<div class="container">
 		<br>
 		<form class="form-horizontal" role="form" method="post" action="">
@@ -32,13 +33,14 @@
 				  </div>				  
 			</form>
 	</div>
+	 -->
 </div>
 
 
 
 <?php
 error_reporting(E_ALL ^ E_DEPRECATED);
-	$conexion = mysql_connect("localhost","root","123456789");
+	$conexion = mysql_connect("localhost","root","");
 		mysql_select_db("mydb",$conexion);
 
 		$sql=mysql_query("SELECT count(*) FROM tutores");

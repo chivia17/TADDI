@@ -11,7 +11,7 @@ require_once("comboBox_carreras.php");
 			<div class="form-group">
 				<label for="clave" class="col-md-2 control-label">Numero de Control</label>
 				<div class="col-md-2">
-				    <input type="text" class="form-control" id="nc" name="nc" placeholder="NC">
+				    <input type="text" class="form-control" id="nc" name="nc" placeholder="NC" required>
 				</div>
 				<div class="col-md-2">
 				    <button type="button" class="btn btn-default buscar" id="busc">Buscar</button>

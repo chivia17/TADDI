@@ -156,7 +156,7 @@ function validar_num(nu){
 
 function validar_let(let){
 	valor = let;
-	var patron = /^[a-zA-Z]*$/;
+	var patron = /^[a-zA-Z+\s]*$/;
     if(!valor.search(patron)) {
 	  return true;
 	}

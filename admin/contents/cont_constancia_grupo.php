@@ -1,6 +1,6 @@
 <div class="contenido container">
 	<div class="titulo text-center">
-		<h2><b>CONSTANCIA TUTOR</b></h2>
+		<h2><b>CONSTANCIA GRUPO</b></h2>
 	</div>
 	<div class="container">
 		<br>
@@ -13,15 +13,6 @@
   							</select>
 				    </div>
 				  </div>
-				  <div class="form-group">
-				    <label for="sele" class="col-md-2 control-label">Tutor</label>
-				    <div class="col-md-6">
-				      <select required name="tutor" class="form-control">    
-   					    		<option value="">TUTOR</option>
-  							</select>
-				    </div>
-				  </div>
-				  	
 				  <div class="form-group">
 				    <label for="sel" class="col-md-2 control-label">Periodo</label>
 				    <div class="col-md-6">
