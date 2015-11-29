@@ -11,7 +11,7 @@ session_start();
 		</div>
 		<?php include "./includes/nav.html"; ?>
 		<div class="wrapper">
-
+			<?php include "./contents/cont_showaviso.php"; ?>
 		</div>
 		<?php include "./includes/footer.html"; ?>
 	</body>
