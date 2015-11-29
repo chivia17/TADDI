@@ -22,7 +22,7 @@
 						<span class="input-group-addon btn btn-default btn-file">
 							<span class="fileinput-new" >Seleccionar documento</span>
 							<span class="fileinput-exists">Cambiar</span>
-							<input type="file" name="userfile" id="userfile">
+							<input type="file" name="userfile" id="userfile" required>
 						</span>
 						<a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
 					</div>

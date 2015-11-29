@@ -11,7 +11,7 @@ $cve = $_SESSION["cveCar"];
 			<div class="form-group">
 				<label for="clave" class="col-md-2 control-label">Numero de Control</label>
 				<div class="col-md-2">
-				    <input type="text" class="form-control" id="nc" name="nc" placeholder="NC">
+				    <input type="text" class="form-control" id="nc" name="nc" placeholder="NC" required>
 				</div>
 				<div class="col-md-2">
 				    <button type="button" class="btn btn-default buscar" id="busc">Buscar</button>
@@ -29,7 +29,8 @@ $cve = $_SESSION["cveCar"];
 				    <label for="seleccar" class="col-md-2 control-label">Nueva Carrera</label>
 				    <div class="col-md-6">
 				     	<form action="" method="post">
-								<select name="programa" class="form-control" id="prog">
+								<select required name="programa" class="form-control" id="prog">
+									<option value="" name="">-Seleccione una carrera-</option>
                 <?php
                 echo "<option>--Selecciona Carrera--</option>";
 								include'conexion.php';
@@ -49,7 +50,8 @@ $cve = $_SESSION["cveCar"];
 								<label for="seleccar" class="col-md-2 control-label">Grupo</label>
 								<div class="col-md-6">
 									<form action="" method="post">
-              			<select name="grup" class="form-control" id="grup">
+              							<select required name="grup" class="form-control" id="grup">
+              								<option value="" name="">-Seleccione una grupo-</option>
 										</select>
 								</form>
 								</div>

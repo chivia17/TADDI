@@ -11,7 +11,7 @@
 			<div class="form-group">
 				<label for="clave" class="col-md-2 control-label">Numero de Control</label>
 				<div class="col-md-2">
-				    <input type="text" class="form-control" id="nc" name="nc" placeholder="NC">
+				    <input type="text" class="form-control" id="nc" name="nc" placeholder="NC" required>
 				</div>
 			</div>
 		<div class="form-group">

@@ -11,7 +11,7 @@ $cve = $_SESSION["cveCar"];
 			<div class="form-group">
 				<label for="clave" class="col-md-2 control-label">Numero de Control</label>
 				<div class="col-md-2">
-				    <input type="text" class="form-control" id="nc1" name="nc1" placeholder="NC">
+				    <input type="text" class="form-control" id="nc1" name="nc1" placeholder="NC" required>
 				</div>
 				<div class="col-md-2">
 				    <button type="button" class="btn btn-default" id="busc1">Buscar</button>
@@ -24,11 +24,14 @@ $cve = $_SESSION["cveCar"];
 	  					</table>
 				</div>
 			</div>
+		</form>
+		<form>
 			<div class="form-group">
 				    <label for="seleccar" class="col-md-2 control-label">Nuevo Grupo</label>
 				    <div class="col-md-6">
 				     	<form action="" method="post">
-  							<select name="programa" class="form-control" id="grup1">
+  							<select required name="programa" class="form-control" id="grup1">
+  								<option value="" name="">-Seleccione una Grupo-</option>
   							</select>
 						</form>
 				    </div>

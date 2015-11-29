@@ -8,8 +8,8 @@
   			<div class="form-group">
 				<label for="selectCarrera" class="col-sm-2 control-label">Carrera</label>
 				<div class="col-sm-8">
-  					<select name="selectCarrera" class="form-control">    
-   						<option value=""></option>
+  					<select required name="selectCarrera" class="form-control">    
+   						<option value="">Seleccionar Carrera</option>
   					</select>
 				</div>
 			</div>

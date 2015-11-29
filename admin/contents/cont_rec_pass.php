@@ -9,7 +9,8 @@
 				  <div class="form-group">
 				    <label class="col-md-2 control-label">RFC</label>
 				    <div class="col-md-3">
-				      <input type="text" class="form-control" id="recpassrfc" name="recpassrfc" placeholder="RFC" required>
+				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
+				      type="text" class="form-control" id="recpassrfc" name="recpassrfc" placeholder="RFC" required>
 				    </div>
 				  </div>
 				  <div class="row">
