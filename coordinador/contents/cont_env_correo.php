@@ -8,7 +8,7 @@
 			<div class="form-group">
 				<label for="cont_mail" class="col-md-2 control-label">Contenido de Correo:</label>
 				<div class="col-md-6">
-				    <input type="text" class="form-control" id="cont_mail" name="cont_mail" placeholder="Contenido">
+				    <input type="text" class="form-control" id="cont_mail" name="cont_mail" placeholder="Contenido" required>
 				</div>
 			</div>
 			<div class="form-group">
