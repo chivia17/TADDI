@@ -12,7 +12,7 @@
 			<div class="form-group">
 				<label for="noControl" class="col-sm-4 control-label">Numero de Control</label>
 				<div class="col-sm-4">
-				    <input type="text" class="form-control" id="noControl" name="noControl" placeholder="Número de control">
+				    <input type="text" class="form-control" id="noControl" name="noControl" placeholder="Número de control" required>
 				</div>
 				<div class="col-sm-2">
       				<button type="submit" class="btn btn-default btn-block">Buscar</button>

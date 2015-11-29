@@ -13,8 +13,8 @@
   			<div class="form-group">
     			<label for="selGrupo" class="col-sm-2 control-label">Grupo</label>
     			<div class="col-sm-7">
-	      			<select name="selGrupo" class="form-control" id="selGrupo">
-                		<option>--Selecciona grupo--</option>
+	      			<select required name="selGrupo" class="form-control" id="selGrupo">
+                		<option value="">--Selecciona grupo--</option>
   					</select><br>
     			</div>
     			<div class="col-sm-2">

@@ -13,9 +13,9 @@ $cve = $_SESSION["rfc"];
   			<div class="form-group">
     			<label for="nvoGrupo" class="col-sm-2 control-label">Grupo</label>
     			<div class="col-sm-7">
-	      			<select name="nvoGrupo" class="form-control" id="grupo">
+	      			<select required name="nvoGrupo" class="form-control" id="grupo">
+	      				<option value="">-Seleccionar Grupo-</option>
 										<?php
-		                echo "<option>--Selecciona Grupo--</option>";
 										include'conexion.php';
 										$conexion = conectar();
 										$query = "SELECT idGrupos, NombreGrupo FROM grupos WHERE idTutores='$cve'" or die("Error in the consult.." . mysqli_error($conexion));
