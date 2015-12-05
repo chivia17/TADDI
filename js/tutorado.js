@@ -18,4 +18,12 @@ function main(){
         }
     }});
   });
+
+
+  $('#logout').click(function(){     //Boton Logout Tutorado
+    location.href= "../contents/logout.php";
+  });
+
+  
+
 }
