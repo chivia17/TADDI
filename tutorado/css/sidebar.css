@@ -1,0 +1,171 @@
+.vertical_nav {
+	-moz-transition: all 0.3s ease-out;
+  	-webkit-transition: all 0.3s ease-out;
+  	transition: all 0.3s ease-out;
+}
+
+
+*{
+	box-sizing: border-box; 
+}
+
+:focus, :active {
+	outline: none; 
+} 
+
+.toggle_menu {
+	display: block;
+  	float: left;
+	width: 40px;
+	height: 40px;
+  	background: none;
+  	border: 0px;
+	text-align: center;
+  	cursor: pointer; 
+}
+
+.toggle_menu i {
+	display:block;
+	font-size: 18px; 
+}
+
+.vertical_nav {
+	z-index: 100;
+	position: fixed;
+	min-height: 83%;
+	height: auto;
+  	left: -200px;
+  	top: 120px;
+	width: 0;
+  	/*  bottom: 0px; Remove */
+  	width: 200px;
+  	background: #33c6a5; 
+}
+
+.vertical_nav-opened {
+	left: 0px !important;
+}
+
+.menu {
+	position: absolute; 
+  	top: 10px;
+  	bottom: 40px; /* Remove */
+  	overflow-y: auto;
+  	width: 100%;
+  	margin: 0;
+  	padding: 0;
+  	list-style-type: none; 
+}
+
+.menu-item {
+	position: relative;
+  	min-height: 40px;
+  	line-height: 40px; 
+}
+
+.menu-item_has_sub_menu .menu-link:after {
+	position: absolute;
+  	top: 0;
+  	right: 20px;
+  	height: 40px;
+  	line-height: 40px;
+  	font-family: "FontAwesome";
+  	content: "\f0d7";	
+}
+
+.menu_subitems-opened {
+	background: #67dac0; 
+	
+}
+
+.menu_subitems-opened .menu-link {
+    color: #000; 
+	
+}
+
+.menu_subitems-opened .sub_menu {
+    display: block; 
+}
+
+.menu-link {
+	display: block;
+  	padding-left: 20px;
+  	overflow: hidden;
+  	text-decoration: none;
+  	color: #fff;
+  	font-weight: 400; /* remove */
+  	white-space: nowrap; /* remove / normal */
+  	cursor: pointer; 
+}
+
+.menu-link:link {
+	text-decoration: none;
+}
+
+.menu-link:hover, .menu-link:hover .menu-label {
+	color: #fff;
+    background: #67dac0; 
+}
+
+.menu-label {
+	display: block;
+  	height: 40px;
+  	line-height: 40px; 
+}
+
+.sub_menu {
+	position:inherit;
+  	display: none;
+  	overflow: hidden;
+  	padding-left: 0px;
+  	list-style: none; 
+}
+
+.sub_menu-link {
+	display: block;
+  	padding-left: 20px;
+  	padding-right: 16px;
+  	color: #fff;
+  	text-decoration: none; 
+}
+
+.sub_menu-link:link{
+	text-decoration: none;
+}
+
+.sub_menu-link:hover {
+	color: #666;
+    background: #9ce6d5; 
+}
+
+.sub_menu-link_active {
+  	color: #666;
+  	font-weight: 500; /* remove */
+}
+
+
+
+@media(max-width: 544px){
+	#icons {
+		display: none;
+	}
+}
+
+@media (min-width: 545px){
+	.toggle_icons {
+		display: none;
+	}
+	
+}
+
+@media (min-width: 992px) {
+	.vertical_nav {
+		left: 0; 
+		z-index: 100;
+	}
+	
+  	.toggle_menu {
+    	display: none; 
+	}
+    
+}

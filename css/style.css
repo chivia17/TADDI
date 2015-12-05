@@ -14,8 +14,9 @@ body{
 	width: 100%;
 	height: auto;
 	background-color: #efefef;
-	padding-left: 30px;
 	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
 }
 
 #tadii{
@@ -96,7 +97,6 @@ body{
 }
 
 
-
 #content{
 	height: 700px;
 }
@@ -133,12 +133,30 @@ body{
 	text-align: center;
 }
 
-#inp_sesion{
+/*#inp_sesion{
 	height: 40px;
 	font-size: 16px;
+}*/
+
+.img-center{
+	margin: 0;
 }
 
-#icon_user{
-	margin: 0;
-	padding-left: 90px;
+.titles{
+	font-size: 44px;
+	font-family: HelveticaNeue; 
+	text-shadow: 3px 4px 3px #b8b8b8;
+}
+
+.helv{
+	font-family: HelveticaNeue; 
+}
+
+textarea{
+	resize: none;
+}
+
+.btn-responsive {
+    white-space: normal !important;
+    word-wrap: break-word;
 }
