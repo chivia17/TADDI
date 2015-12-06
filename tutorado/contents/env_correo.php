@@ -1,5 +1,5 @@
 <?php
-include("../../admin/conexion/conexionMysql.php");
+include'conexion.php';
 session_start();
 $rfc = $_SESSION['nc'];
 //echo '<script language="javascript">alert("'.$rfc.'");</script>'; 
@@ -7,31 +7,33 @@ $rfc = $_SESSION['nc'];
 //$rfc = "SAHM720522FA4";
 $cont_mail = $_POST["cont_mail"];
 $destinatarios = "";
+$nombre="";
 
-$conexion = new MySQL();
-$query = $conexion->consulta("SET NAMES 'utf8'");
-$query = $conexion->consulta("SELECT idGrupos FROM grupos WHERE idTutores = '".$rfc."'");
-$resultado = mysql_fetch_array($query);
-$query = $conexion->consulta("SELECT correo FROM alumnos WHERE idGrupos = '".$resultado["idGrupos"]."'");
-
-while($row = mysql_fetch_row($query))
-{
-	$destinatarios = $destinatarios.",".$row[0];
-	//echo '<script language="javascript">alert("'.$row[0].'");</script>'; 
-}
+$conexion = conectar();
+$query = $conexion->query("SET NAMES 'utf8'");
+$resultado = $conexion->query(" SELECT correo FROM tutores WHERE idTutores = (select idTutores from grupos where idGrupos = (select idGrupos from alumnos where idAlumnos = '".$rfc."'))");
+$resu =$conexion->query("SELECT nombreAlumno,apellPAlumno,apellMAlumno from alumnos where idAlumnos='".$rfc."'");
+while($row = $resu->fetch_assoc())
+     {
+      $nombre=$row["nombreAlumno"]." ".$row["apellPAlumno"]." ".$row["apellMAlumno"];
+    }
+while($row = $resultado->fetch_assoc())
+     {
+      $destinatarios=$row["correo"];
+    }
 if($destinatarios != "")
 {
 	$correo = $destinatarios;
 	$correo = utf8_decode($correo);
-	$asunto = utf8_decode("Aviso de Coordinador");
+	$asunto = utf8_decode("Correo de tutorado ".$nombre);
 	$mensaje = $cont_mail;
 	$mensaje = str_replace("\n.", "\n..", $mensaje);
 	mail($correo, $asunto, $mensaje);
-	echo '<script language="javascript">alert("Correos enviados");</script>'; 
+	echo '<script language="javascript">alert("Correo enviado");</script>'; 
 }
 else
 {
-	echo '<script language="javascript">alert("No existen tutores asignados");</script>'; 
+	echo '<script language="javascript">alert("No se tiene cargado un correo del tutor");</script>'; 
 }
 echo '<script language="javascript">window.location.href="../env_correo.php";</script>'; 
 ?>
