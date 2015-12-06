@@ -35,12 +35,12 @@
 					<div class="enclose">
 						<ul class="">
 							<li>
-								Revisa la línea de vida y observa aquellos momentos en los cuales experimentaste los mayores 										éxitos o victorias. 
+								Revisa la línea de vida y observa aquellos momentos en los cuales experimentaste los mayores 										éxitos o victorias.
 							</li>
 							<li>¿Qué talentos especiales sacaste a relucir en dichos momentos?</li>
 							<li>Identifica cuál</li>
 						</ul>
-						<textarea class="form-control" name="" id="" rows="5"></textarea>
+						<textarea class="form-control" name="" id="f1" rows="5"></textarea>
 						</div>
 					</div>
 				</div>
@@ -53,7 +53,7 @@
 							<li>Estas son las cualidades y virtudes personales particulares que aportan a las relaciones.</li>
 							<li>Escríbelas</li>
 						</ul>
-						<textarea class="form-control" name="" id="" rows="5"></textarea>
+						<textarea class="form-control" name="" id="f2" rows="5"></textarea>
 					</div>
 					</div>
 				</div>
@@ -67,7 +67,7 @@
 								Éstos pueden ser cosas intangibles, como experiencias de la vida y relaciones, o también activos 									 tangibles como bienes naturales.
 							</li>
 						</ul>
-						<textarea class="form-control" name="" id="" rows="5"></textarea>
+						<textarea class="form-control" name="" id="f3" rows="5"></textarea>
 					</div>
 					</div>
 				</div>
@@ -81,7 +81,7 @@
 								ESCRIBA LAS CUATRO FORTALEZAS MAS IMPORTANTES QUE DEBE CONSTRUIR PARA LOS SIGUIENTES CAPÍTULOS DE 									  SU VIDA.
 							</li>
 						</ul>
-						<textarea class="form-control" name="" id="" rows="5"></textarea>
+						<textarea class="form-control" name="" id="f4" rows="5"></textarea>
 					</div>
 					</div>
 				</div>
@@ -127,7 +127,7 @@
 								<li>Preste especial atención a los patrones recurrentes de fracasos en tu vida.</li>
 								<li>¿Cuál es la debilidad o deficiencia más común que consideras tener y que piensas que está 											relacionada con estos fracasos?</li>
 							</ul>
-							<textarea class="form-control" name="" id="" rows="5"></textarea>
+							<textarea class="form-control" name="" id="d1" rows="5"></textarea>
 						</div>
 					</div>
 				</div>
@@ -139,7 +139,7 @@
 								<li>¿Cuáles son las tendencias negativas o destructivas de su comportamiento que pueden seguir 											causando sufrimiento a los demás y a usted mismo en el futuro si no son atendidas?</li>
 								<li>Escríbalas</li>
 							</ul>
-							<textarea class="form-control" name="" id="" rows="5"></textarea>
+							<textarea class="form-control" name="" id="d2" rows="5"></textarea>
 						</div>
 					</div>
 				</div>
@@ -150,7 +150,7 @@
 							<ul class="">
 								<li>¿Qué es lo que más le gustaría cambiar de usted mismo en el próximo capítulo de tu vida?</li>
 							</ul>
-							<textarea class="form-control" name="" id="" rows="5"></textarea>
+							<textarea class="form-control" name="" id="d3" rows="5"></textarea>
 						</div>
 					</div>
 				</div>
@@ -162,7 +162,7 @@
 							<li>Revise sus respuestas a las preguntas anteriores.</li>
 							<li>ESCRIBA LAS CUATRO DEBILIDADES MAS SIGNIFICATIVAS QUE LO LIMITAN EN EL PRÓXIMO CAPÍTULO DE TU 										VIDA.</li>
 						</ul>
-						<textarea class="form-control" name="" id="" rows="5"></textarea>
+						<textarea class="form-control" name="" id="d4" rows="5"></textarea>
 					</div>
 					</div>
 				</div>
@@ -213,7 +213,7 @@
 							<ul class="">
 								<li>Cuando mire hacia el horizonte, en el próximo capítulo de su vida, ¿cuál cree que sea el reto 										más grande que tendrá que afrontar?</li>
 							</ul>
-							<textarea class="form-control" name="" id="" rows="5"></textarea>
+							<textarea class="form-control" name="" id="a1" rows="5"></textarea>
 						</div>
 					</div>
 				</div>
@@ -224,7 +224,7 @@
 							<ul class="">
 								<li>¿Cuál es el riesgo personal más grande de que tiene que tomar en el futuro?</li>
 							</ul>
-							<textarea class="form-control" name="" id="" rows="5"></textarea>
+							<textarea class="form-control" name="" id="a2" rows="5"></textarea>
 						</div>
 					</div>
 				</div>
@@ -235,7 +235,7 @@
 							<ul class="">
 								<li>¿Qué es lo que con mayor frecuencia evita, que eventualmente tendrá que afrontar?</li>
 							</ul>
-							<textarea class="form-control" name="" id="" rows="5"></textarea>
+							<textarea class="form-control" name="" id="a3" rows="5"></textarea>
 						</div>
 					</div>
 				</div>
@@ -246,7 +246,7 @@
 						<ul class="">
 							<li>¿A qué le tiene más miedo?</li>
 						</ul>
-						<textarea class="form-control" name="" id="" rows="5"></textarea>
+						<textarea class="form-control" name="" id="a4" rows="5"></textarea>
 					</div>
 					</div>
 				</div>
@@ -258,7 +258,7 @@
 							<li>Revise sus respuestas a las preguntas anteriores.</li>
 							<li>ANOTE LAS CUATRO AMENAZAS MÁS IMPORTANTES, DE LAS CUALES NECESITA ESTAR CONSCIENTE:</li>
 						</ul>
-						<textarea class="form-control" name="" id="" rows="5"></textarea>
+						<textarea class="form-control" name="" id="a5" rows="5"></textarea>
 					</div>
 					</div>
 				</div>
@@ -297,5 +297,3 @@
 		});
 	</script>
 </div>
-
-

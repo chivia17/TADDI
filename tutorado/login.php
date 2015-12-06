@@ -43,10 +43,10 @@ else{
 					<img class="img-center" src="../img/tutorado_120.png" alt="">
 					<h3 class="helv">TUTORADO</h3>
 					<form method="POST" action="return false" onsubmit="return false">
-						<input class="form-control" id="userc" type="text" placeholder="Número de control">
-						<input class="form-control" id="passc" type="password"  placeholder="Contraseña">
+						<input class="form-control" id="userto" type="text" placeholder="Número de control">
+						<input class="form-control" id="passto" type="password"  placeholder="Contraseña">
 						<br>
-						<input class="btn btn-block helv" id="sesion-tutorado" type="submit" value="Iniciar sesión">
+						<input class="btn btn-block helv" id="sesion-tuto" type="submit" value="Iniciar sesión">
 					</form>
 				</div>
 				<div class="col-xs-2 col-md-4 col-lg-4"></div>

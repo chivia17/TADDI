@@ -1,3 +1,6 @@
+<?php
+require_once("../contents/comboBox_carreras.php");
+?>
 <!DOCTYPE html>
 <html>
 	<?php include "./includes/head.html"; ?>
@@ -27,31 +30,35 @@
 					<div class="text-right">
 						<button class="btn btn-success" id="btn-registrar" onclick="location='./login.php'">Iniciar sesión</button>
 					</div>
-				</div> 
+				</div>
 			</div><br>
 			<div class="row">
 				<div class="col-xs-2 col-md-4 col-lg-4"></div>
 				<div class="col-xs-8 col-md-4 col-lg-4 text-center">
 					<img class="img-center" src="../img/tutorado_120.png" alt="">
 					<h3 class="helv">TUTORADO</h3>
-					<form method="POST" action="return false" onsubmit="return false">
-						<input class="form-control" id="userc" type="text" placeholder="Nombre(s)">
-						<input class="form-control" id="passc" type="text"  placeholder="Apellidos">
-						<select class="form-control" name="" id="selCarrera">
-							<option value="">Seleccionar carrera</option>
-							<option value="">Ingeniería en sistemas computacionales</option>
-							<option value="">Ingeniería informática</option>
+					<form method="post" action="" onsubmit="">
+						<input class="form-control" id="nomAl" type="text" placeholder="Nombre(s)">
+						<input class="form-control" id="apPat" type="text"  placeholder="Apellido Paterno">
+						<input class="form-control" id="apMat" type="text"  placeholder="Apellido Materno">
+						<input class="form-control" id="corr" type="text"  placeholder="Correo Electronico">
+						<select class="form-control" name="" id="selCar">
+							<option value="">--Seleccionar carrera--</option>
+							<?php
+								 $carreras=getCarreras();
+										 foreach ($carreras as $indice => $registro) {
+												echo "<option value='".$registro["cveCarrera"]."'>".$registro["NombreCarrera"]."</option>";
+											}
+							?>
 						</select>
-						<select class="form-control" name="" id="selGrupo">
-							<option value="">Seleccionar grupo</option>
-							<option value="">ISC20151</option>
-							<option value="">IINF20151</option>
+						<select class="form-control" name="" id="selGru">
+							<option value="">--Seleccionar grupo--</option>
 						</select>
-						<input class="form-control" id="userc" type="text" placeholder="No. de control">
-						<input class="form-control" id="userc" type="password" placeholder="Contraseña">
-						<input class="form-control" id="userc" type="password" placeholder="Repetir contraseña">
+						<input class="form-control" id="nc" type="text" placeholder="No. de control" >
+						<input class="form-control" id="pass" type="password" placeholder="Contraseña">
+						<input class="form-control" id="pasr" type="password" placeholder="Repetir contraseña">
 						<div class="form-group"></div>
-						<input class="btn btn-block" id="sesion-tutorado" type="submit" value="Registrarse">			
+						<input class="btn btn-block" id="sesion-tutorado" type="submit" value="Registrarse">
 					</form>
 				</div>
 				<div class="col-xs-2 col-md-4 col-lg-4"></div>

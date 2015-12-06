@@ -1,3 +1,6 @@
+<?php
+$nc = $_SESSION["nc"];
+ ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <div class="row">
 	<div class="titulo text-center">
@@ -6,7 +9,7 @@
 	<hr>
 </div>
 
-<br><br>		
+<br><br>
 
 <div class="panel panel-success">
 	<div class="panel-heading">RÚBRICA PARA EVALUAR EL DESEMPEÑO DEL TUTOR</div>
@@ -245,17 +248,15 @@
 							<input type="radio" id="" name="eva04" value="1"> Valor 1
 						</label>
 					</td>
-				</tr>														
+				</tr>
 			</table>
 		</div>
 		<div class="row">
 			<div class="col-lg-4"></div>
 			<div class="col-lg-4">
-				<button type="button" class="btn btn-success btn-block" id="grdEvaluacion">Guardar</button>
+				<button type="submit" class="btn btn-success btn-block" id="grdEvaluacion">Guardar</button>
 			</div>
 			<div class="col-lg-4"></div>
 		</div>
 	</div>
 </div>
-
-
