@@ -148,5 +148,43 @@ function main(){
                               });
     });
 
+    $('#grdFortalezas').click(function(){     //Boton Guardar Fortalezas Analisis FODA
+      p1 = $('#f1').val();
+      p2 = $('#f2').val();
+      p3 = $('#f3').val();
+      p4 = $('#f4').val();
+      $.post("./contents/fortaFoda.php", {p1 : p1, p2 : p2, p3 : p3, p4 : p4},
+                               function(data){
+                                               alert(data);
+                                             });
+    });
+
+    $('#grdDebilidades').click(function(){     //Boton Guardar Debilidades Analisis FODA
+      p1 = $('#d1').val();
+      p2 = $('#d2').val();
+      p3 = $('#d3').val();
+      p4 = $('#d4').val();
+      $.post("./contents/debiFoda.php", {p1 : p1, p2 : p2, p3 : p3, p4 : p4},
+                               function(data){
+                                               alert(data);
+                                             });
+    });
+
+
+    $('#grdAmenazas').click(function(){     //Boton Guardar Debilidades Analisis FODA
+      p1 = $('#a1').val();
+      p2 = $('#a2').val();
+      p3 = $('#a3').val();
+      p4 = $('#a4').val();
+      p5 = $('#a5').val();
+      $.post("./contents/ameFoda.php", {p1 : p1, p2 : p2, p3 : p3, p4 : p4,
+                                        p5 : p5 },
+                               function(data){
+                                               alert(data);
+                                             });
+    });
+
+
+
 
 }
