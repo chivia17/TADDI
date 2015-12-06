@@ -24,7 +24,7 @@ function main(){
     location.href= "../contents/logout.php";
   });
 
-  $("#selCar").change(function() {
+  $("#selCar").change(function() { //Select Grupo Registro
         id_ca = $(this).val();
         $.post("../contents/grupos.php", { id_ca: id_ca }, function(data){
             $("#selGru").html(data);
@@ -33,7 +33,7 @@ function main(){
 
 
 
-    $('#sesion-tutorado').click(function(){     //Boton Logout Tutorado
+    $('#sesion-tutorado').click(function(){     //Boton Registrar Alumno
       nomA = $('#nomAl').val();
       aP = $('#apPat').val();
       aM = $('#apMat').val();
@@ -42,17 +42,24 @@ function main(){
       pas = $('#pass').val();
       par = $('#pasr').val();
       coE = $('#corr').val();
-
-
-
-
-
       $.post("./contents/regisAlum.php", {nomA : nomA, aP : aP, aM : aM,
                                            iG : iG, ncA : ncA, pas : pas,
                                            coE : coE},
                  function(data){
                                 alert(data);
-                      })
+                              });
+    });
+
+    $('#grdEvaluacion').click(function(){     //Boton Logout Tutorado
+      p1 = $('input:radio[name=eva01]:checked').val();
+      p2 = $('input:radio[name=eva02]:checked').val();
+      p3 = $('input:radio[name=eva03]:checked').val();
+      p4 = $('input:radio[name=eva04]:checked').val();
+      $.post("./contents/evalTuto.php", {p1 : p1, p2 : p2, p3 : p3, p4 : p4},
+                 function(data){
+                                alert(data);
+                              });
+
     });
 
 }
