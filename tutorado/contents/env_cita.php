@@ -30,5 +30,5 @@ else
 {
 	echo '<script language="javascript">alert("No se tiene correo del tutor");</script>'; 
 }
-echo '<script language="javascript">window.location.href="../cont_agendar_cita.php";</script>'; 
+echo '<script language="javascript">window.location.href="../agendar_cita.php";</script>'; 
 ?>
