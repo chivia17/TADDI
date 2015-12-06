@@ -184,6 +184,24 @@ function main(){
                                              });
     });
 
+     $('#grdLinea').click(function(){     //Boton Guardar Debilidades Analisis FODA
+     p1 = $('#e1').val();
+     p2 = $('#e2').val();
+     p3 = $('#e3').val();
+     p4 = $('#e4').val();
+     p5 = $('#e5').val();
+     p6 = $('#f1').val();
+     p7 = $('#f2').val();
+     p8 = $('#f3').val();
+     p9 = $('#f4').val();
+     p10 = $('#f5').val();
+     $.post("./contents/testLinVid.php", {p1 : p1, p2 : p2, p3 : p3, p4 : p4,
+                                       p5 : p5, p6 : p6, p7 : p7, p8 : p8,
+                                       p9 : p9, p10 : p10},
+                              function(data){
+                                              alert(data);
+                                            });
+   });
 
 
 
