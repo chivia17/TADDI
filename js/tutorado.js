@@ -78,8 +78,42 @@ function main(){
                  function(data){
                                 alert(data);
                               });
+    });
 
-    })
+    $('#grdEstilo').click(function(){     //Boton Guardar Test Estilos Aprendizaje
+      p1 = $('input:radio[name=est01]:checked').val();
+      p2 = $('input:radio[name=est02]:checked').val();
+      p3 = $('input:radio[name=est03]:checked').val();
+      p4 = $('input:radio[name=est04]:checked').val();
+      p5 = $('input:radio[name=est05]:checked').val();
+      p6 = $('input:radio[name=est06]:checked').val();
+      p7 = $('input:radio[name=est07]:checked').val();
+      p8 = $('input:radio[name=est08]:checked').val();
+      p9 = $('input:radio[name=est09]:checked').val();
+      p10 = $('input:radio[name=est10]:checked').val();
+      p11 = $('input:radio[name=est11]:checked').val();
+      p12 = $('input:radio[name=est12]:checked').val();
+      p13 = $('input:radio[name=est13]:checked').val();
+      p14 = $('input:radio[name=est14]:checked').val();
+      p15 = $('input:radio[name=est15]:checked').val();
+      p16 = $('input:radio[name=est16]:checked').val();
+      p17 = $('input:radio[name=est17]:checked').val();
+      p18 = $('input:radio[name=est18]:checked').val();
+      p19 = $('input:radio[name=est19]:checked').val();
+      p20 = $('input:radio[name=est20]:checked').val();
+      p21 = $('input:radio[name=est21]:checked').val();
+      p22 = $('input:radio[name=est22]:checked').val();
+      p23 = $('input:radio[name=est23]:checked').val();
+      $.post("./contents/testEstApr.php", {p1 : p1, p2 : p2, p3 : p3, p4 : p4,
+                                         p5 : p5, p6 : p6, p7 : p7, p8 : p8,
+                                     p9 : p9, p10 : p10, p11 : p11, p12 : p12,
+                                     p13 : p13, p14 : p14, p15 : p15, p16 : p16,
+                                     p17 : p17, p18 : p18, p19 : p19, p20 : p20,
+                                     p21 : p21, p22 : p22, p23 : p23},
+                 function(data){
+                                alert(data);
+                              });
+    });
 
 
 }

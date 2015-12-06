@@ -596,13 +596,13 @@
 		<div class="row">
 			<div class="col-lg-4"></div>
 			<div class="col-lg-4">
-				<button type="button" class="btn btn-success btn-block" id="grdEstilos">Guardar</button>
+				<button type="button" class="btn btn-success btn-block" id="grdEstilo">Guardar</button>
 			</div>
 			<div class="col-lg-4"></div>
 		</div>
 	</div>
-</div>	
-	
+</div>
+
 <div class="row">
 	<div class="col-lg-4"></div>
 	<div class="col-lg-4"></div>
@@ -617,5 +617,3 @@
 		});
 	</script>
 </div>
-
-
