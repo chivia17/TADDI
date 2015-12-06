@@ -50,7 +50,7 @@ function main(){
                               });
     });
 
-    $('#grdEvaluacion').click(function(){     //Boton Logout Tutorado
+    $('#grdEvaluacion').click(function(){     //Boton Guarda Evaluacion Tutor
       p1 = $('input:radio[name=eva01]:checked').val();
       p2 = $('input:radio[name=eva02]:checked').val();
       p3 = $('input:radio[name=eva03]:checked').val();
@@ -59,7 +59,27 @@ function main(){
                  function(data){
                                 alert(data);
                               });
-
     });
+
+
+    $('#grdEstilos').click(function(){     //Boton Guardar Test de Asertividad
+      p1 = $('input:radio[name=aser01]:checked').val();
+      p2 = $('input:radio[name=aser02]:checked').val();
+      p3 = $('input:radio[name=aser03]:checked').val();
+      p4 = $('input:radio[name=aser04]:checked').val();
+      p5 = $('input:radio[name=aser05]:checked').val();
+      p6 = $('input:radio[name=aser06]:checked').val();
+      p7 = $('input:radio[name=aser07]:checked').val();
+      p8 = $('input:radio[name=aser08]:checked').val();
+      p9 = $('input:radio[name=aser09]:checked').val();
+      $.post("./contents/testAser.php", {p1 : p1, p2 : p2, p3 : p3, p4 : p4,
+                                         p5 : p5, p6 : p6, p7 : p7, p8 : p8,
+                                         p9 : p9},
+                 function(data){
+                                alert(data);
+                              });
+
+    })
+
 
 }
