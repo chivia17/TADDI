@@ -88,4 +88,8 @@ $(document).ready(main);
         });
      });
 
+     $('#logout').click(function(){     //Boton Logout Tutor
+       location.href= "../contents/logout.php";
+     });
+
 }
