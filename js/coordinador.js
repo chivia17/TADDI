@@ -29,6 +29,9 @@ $(document).ready(main);
      });
     });
 
+    $('#logout').click(function(){     //Boton Logout Coordinador
+      location.href= "../contents/logout.php";
+    });
 
 
    }
