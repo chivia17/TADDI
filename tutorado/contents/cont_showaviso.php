@@ -1,5 +1,5 @@
 <?php
-$rfc = $_SESSION['rfc'];
+$rfc = $_SESSION["nc"];
  ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <div class="row">
@@ -15,7 +15,7 @@ $rfc = $_SESSION['rfc'];
 	 					<table class="table" id="tableArchivos">
 	 						<tr><td><strong>Aviso</strong></td><td class="text-center"><strong>Ver documento</strong></td><td class="text-center"><strong>Descargar</strong></td></tr>
 	 						<?php
-	 						include "../contents/conexion.php";	 						
+	 						include "../contents/conexion.php";
 	 						$dir="../contents/Archivos/";
 	 						$cveCarrera="";
 	 						$nomArc="";

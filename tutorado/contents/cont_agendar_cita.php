@@ -1,5 +1,5 @@
 <?php
-$cve = $_SESSION["rfc"];
+$cve = $_SESSION["nc"];
  ?>
 <div class="contenido container">
 	<div class="titulo text-center">
@@ -26,4 +26,3 @@ $cve = $_SESSION["rfc"];
 		</form>
 	</div>
 </div>
-
