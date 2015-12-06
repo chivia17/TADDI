@@ -1,7 +1,7 @@
 <?php
 include("../../admin/conexion/conexionMysql.php");
 session_start();
-$rfc = $_SESSION['rfc'];
+$rfc = $_SESSION['nc'];
 //echo '<script language="javascript">alert("'.$rfc.'");</script>'; 
 
 //$rfc = "SAHM720522FA4";

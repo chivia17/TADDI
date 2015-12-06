@@ -1,7 +1,7 @@
 <?php
 include'conexion.php';
 session_start();
-$rfc = $_SESSION['rfc'];
+$rfc = $_SESSION['nc'];
 //echo '<script language="javascript">alert("'.$rfc.'");</script>'; 
 
 //$rfc = "SAHM720522FA4";
@@ -10,7 +10,7 @@ $destinatarios = "";
 $fech = $_POST["datepicker"];
 $conexion = conectar();
 $query = $conexion->query("SET NAMES 'utf8'");
-$resultado = $conexion->query(" SELECT correo FROM tutores WHERE idTutores = (select idTutores from grupos where idGrupos = (select idGrupos from alumnos where idAlumnos = '".$numcont."'))");
+$resultado = $conexion->query(" SELECT correo FROM tutores WHERE idTutores = (select idTutores from grupos where idGrupos = (select idGrupos from alumnos where idAlumnos = '".$rfc."'))");
 
 while($row = $resultado->fetch_assoc())
      {
