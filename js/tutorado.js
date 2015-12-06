@@ -171,7 +171,7 @@ function main(){
     });
 
 
-    $('#grdAmenazas').click(function(){     //Boton Guardar Debilidades Analisis FODA
+    $('#grdAmenazas').click(function(){     //Boton Guardar Amenazas Analisis FODA
       p1 = $('#a1').val();
       p2 = $('#a2').val();
       p3 = $('#a3').val();
@@ -184,7 +184,7 @@ function main(){
                                              });
     });
 
-     $('#grdLinea').click(function(){     //Boton Guardar Debilidades Analisis FODA
+     $('#grdLinea').click(function(){     //Boton Guardar Linea de Vida
      p1 = $('#e1').val();
      p2 = $('#e2').val();
      p3 = $('#e3').val();
@@ -203,6 +203,41 @@ function main(){
                                             });
    });
 
+
+   $('#grdEntrevista').click(function(){     //Boton Guardar Entrevista
+     p1 = $('#inpEstatura').val();
+     p2 = $('#inpPeso').val();
+     p3 = $('#selSexo').val();
+     p4 = $('#inpEdad').val();
+     p5 = $('#inpDate').val();
+     p6 = $('#selCivil').val();
+     p7 = $('#selTrabaja').val();
+     p8 = $('#inpLugNac').val();
+     p9 = $('#inpDomicilio').val();
+     p10 = $('#inpCP').val();
+     p11 = $('#inpLada').val();
+     p12 = $('#inpTel').val();
+     p13 = $('#inpEmail').val();
+     p14 = $('#selVivienda').val();
+     p15 = $('#selPropiedad').val();
+     p16 = $('#inpNumPer').val();
+     p17 = $('#selParentesco').val();
+     p18 = $('#selNomPadre').val();
+     p19 = $('#inpEdadPadre').val();
+     p20 = $('#selTraPadre').val();
+     p21 = $('#inpProPadre').val();
+     alert($('#selSexo').val());
+     $.post("./contents/testEntre.php", {  p1 : p1, p2 : p2, p3 : p3, p4 : p4,
+                                            p5 : p5, p6 : p6, p7 : p7, p8 : p8,
+                                      p9 : p9, p10 : p10, p11 : p11, p12 : p12,
+                                    p13 : p13, p14 : p14, p15 : p15, p16 : p16,
+                                    p17 : p17, p18 : p18, p19 : p19, p20 : p20,
+                                    p21 : p21},
+                              function(data){
+                                              alert(data);
+                                            });
+
+   });
 
 
 }

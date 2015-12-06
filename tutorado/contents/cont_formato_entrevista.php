@@ -7,7 +7,7 @@
 </div>
 
 <br>
-	
+
 <div class="panel panel-success">
 <div class="panel-heading">FORMATO DE ENTREVISTA</div>
 	<div class="panel-body">
@@ -54,8 +54,8 @@
 					<label for="selSexo">Sexo:</label>
 					<select class="form-control" name="" id="selSexo">
 						<option value="">Seleccionar opción</option>
-						<option value="">Femenino</option>
-						<option value="">Masculino</option>
+						<option value="Femenino">Femenino</option>
+						<option value="Masculino">Masculino</option>
 					</select>
 				</div>
 				<div class="form-group col-sm-6 col-md-6 col-lg-3">
@@ -72,17 +72,17 @@
 					<label for="selCivil">Estado civil:</label>
 					<select class="form-control" name="" id="selCivil">
 						<option value="">Seleccionar opción</option>
-						<option value="">Soltero</option>
-						<option value="">Casado</option>
-						<option value="">Otro</option>
+						<option value="Soltero">Soltero</option>
+						<option value="Casado">Casado</option>
+						<option value="Otro">Otro</option>
 					</select>
 				</div>
 				<div class="form-group col-sm-4 col-md-4 col-lg-4">
 					<label for="selTrabaja">Trabaja:</label>
 					<select class="form-control" name="" id="selTrabaja">
 						<option value="">Seleccionar opción</option>
-						<option value="">Sí</option>
-						<option value="">No</option>
+						<option value="Sí">Sí</option>
+						<option value="No">No</option>
 					</select>
 				</div>
 			</div>
@@ -109,7 +109,7 @@
 								<input type="text" class="form-control" id="inpLada" placeholder="Lada">
 							</div>
 							<div class="col-sm-9 col-md-9 col-lg-9">
-								<input type="text" class="form-control" id="inpLada" placeholder="Teléfono">
+								<input type="text" class="form-control" id="inpTel" placeholder="Teléfono">
 							</div>
 						</div>
 					</div>
@@ -124,18 +124,18 @@
 					<label for="selVivienda">Tipo de vivienda:</label>
 					<select class="form-control" name="" id="selVivienda">
 						<option value="">Seleccionar opción</option>
-						<option value="">Casa</option>
-						<option value="">Departamento</option>
+						<option value="Casa">Casa</option>
+						<option value="Departamento">Departamento</option>
 					</select>
 				</div>
 				<div class="form-group col-sm-6 col-md-6 col-lg-6">
 					<label for="selPropiedad">La casa o departamento donde vive es:</label>
 					<select class="form-control" name="" id="selPropiedad">
 						<option value="">Seleccionar opción</option>
-						<option value="">Propia</option>
-						<option value="">Rentada</option>
-						<option value="">Prestada</option>
-						<option value="">Otro</option>
+						<option value="Propia">Propia</option>
+						<option value="Rentada">Rentada</option>
+						<option value="Prestada">Prestada</option>
+						<option value="Otro">Otro</option>
 					</select>
 				</div>
 			</div>
@@ -148,10 +148,10 @@
 					<label for="selParentesco">Parentesco:</label>
 					<select class="form-control" name="" id="selParentesco">
 						<option value="">Seleccionar opción</option>
-						<option value="">Tutor</option>
-						<option value="">Familiar</option>
-						<option value="">Padres</option>
-						<option value="">Otro</option>
+						<option value="Tutor">Tutor</option>
+						<option value="Familiar">Familiar</option>
+						<option value="Padres">Padres</option>
+						<option value="Otro">Otro</option>
 					</select>
 				</div>
 				<div class="form-group col-sm-12 col-md-12 col-lg-5">
@@ -168,8 +168,8 @@
 					<label for="selTraPadre">Trabaja:</label>
 					<select class="form-control" name="" id="selTraPadre">
 						<option value="">Seleccionar opción</option>
-						<option value="">Sí</option>
-						<option value="">No</option>
+						<option value="Sí">Sí</option>
+						<option value="No">No</option>
 					</select>
 				</div>
 				<div class="form-group col-sm-4 col-md-4 col-lg-4">
@@ -204,6 +204,3 @@
 		});
 	</script>
 </div>
-
-
-
