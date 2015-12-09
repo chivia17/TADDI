@@ -95,7 +95,6 @@ $(document).ready(main);
 	    });
 
 			$('#sesion-tut').click(function(){   //Boton login administrador
-	      alert("entro");
 	      var us=$("#userc").val();
 	      var pas=$("#passc").val();
 	      $.post("/contents/sesion_coor.php", { us : us , pas : pas }, function(data){
@@ -110,6 +109,36 @@ $(document).ready(main);
 
 	       });
 	     });
+
+			 $('#selCTC').on("change",function()    //Select Tutores Constancia Tutores
+		 	 {
+		 		$("#selCTC option:selected").each(function () {
+		 			id_ca = $(this).val();
+		 			$.post("./contents/tutores.php", { id_ca: id_ca }, function(data){
+		 			 $("#selCTT").html(data);
+		 			});
+		 			});
+		 	 });
+
+      $('#selCTP').on("change",function()    //Select Periodo Constancia Carreras
+      {
+       $("#selCTP option:selected").each(function () {
+	        id_pe = $(this).val();
+					id_tu = $("#selCTT").val();
+	        $.post("./contents/getGruposTu.php", { id_pe: id_pe, id_tu : id_tu },
+					function(data){
+		        $("#selCTG").html(data);
+	           });
+	      });
+       });
+
+			 $('#buCTG').click(function(){            //Boton Generar Constancia Tutor
+				  var ca = $("#selCTC").val()
+				  var ct = $("#selCTT").val();
+				  var cp = $("#selCTP").val();
+					var cg = $("#selCTG").val();
+		      location.href= "./contents/consTutor.php?tuto="+ ct +"&grup="+ cg +"&per="+cp+"&carr="+ca;
+	 		});
 
 
 

@@ -1,11 +1,13 @@
 <?php
 include'conexion.php';
 $conexion = conectar();
-$cca =$_POST["id_ca"];
-$query = "SELECT * FROM grup WHERE cveCarrera='$cca'" or die("Error in the consult.." . mysqli_error($conexion));
+$pe  =$_POST["id_pe"];
+$ctu =$_POST["id_tu"];
+$query = "SELECT * FROM grupos WHERE idTutores='$ctu' AND idPeriodo='$pe'"
+                     or die("Error in the consult.." . mysqli_error($conexion));
 $result = $conexion->query($query);
 if ($result->num_rows > 0) {
-           echo "<option value=''>--Selecciona Grupo--</option>";
+   echo "<option value=''>--Selecciona Grupo--</option>";
  while ($row = $result->fetch_assoc()) {
      $html .= '<option value="'.$row['idGrupos'].'">'.$row['NombreGrupo'].'</option>';
  }
