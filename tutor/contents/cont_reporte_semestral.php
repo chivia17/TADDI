@@ -1,6 +1,9 @@
 <?php
 $cve = $_SESSION["rfc"];
+<<<<<<< HEAD
 $carrera=$_SESSION["cveCar"];
+=======
+>>>>>>> origin/master
  ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <div class="row">
@@ -15,7 +18,29 @@ $carrera=$_SESSION["cveCar"];
 	<div class="row">
 		<div class="form-horizontal">
   			<div class="form-group">
+<<<<<<< HEAD
     			
+=======
+    			<label for="selGrupo" class="col-sm-2 control-label">Grupo</label>
+    			<div class="col-sm-7">
+	      			<select required name="selGrupo" class="form-control" id="grupo">
+                		<option value="">--Selecciona grupo--</option>
+                		<?php
+										include'conexion.php';
+										$conexion = conectar();
+										$query = "SELECT idGrupos, NombreGrupo FROM grupos WHERE idTutores='$cve'" or die("Error in the consult.." . mysqli_error($conexion));
+										$result = $conexion->query($query);
+										while($row = mysqli_fetch_array($result))
+										{
+											echo "<option value='".$row["idGrupos"]."'>".$row["NombreGrupo"]."</option>";
+										 }
+										?>
+  					</select><br>
+    			</div>
+    			<div class="col-sm-2">
+      				<button type="button" class="btn btn-primary btn-block" id="reporte">Ver listado</button>
+    			</div>
+>>>>>>> origin/master
   			</div>
 		</div>
 		<hr>
@@ -26,6 +51,7 @@ $carrera=$_SESSION["cveCar"];
 		<div class="panel panel-success">
 			<div class="panel-heading">Reporte</div>
 			<div class="table-responsive">
+<<<<<<< HEAD
 				<table class="table table-bordered table-hover">
 					<tr>
 						<th class="text-center" colspan="7">REPORTE SEMESTRAL DEL TUTOR</td>
@@ -155,6 +181,9 @@ respuestas on x.idAlumnos=respuestas.idAlumnos where idAnexo=9 and idSubanexos=9
 						<td colspan="2">Observaciones:</td>
 						<td colspan="5" contenteditable="false"></td>
 					</tr>
+=======
+				<table class="table table-bordered table-hover" id="table1">
+>>>>>>> origin/master
 				</table>
 			</div>
 		</div>
