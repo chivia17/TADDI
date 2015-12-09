@@ -1,3 +1,6 @@
+<?php
+$cve = $_SESSION["rfc"];
+ ?>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <div class="row">
 	<div class="text-center">
@@ -13,12 +16,22 @@
   			<div class="form-group">
     			<label for="selGrupo" class="col-sm-2 control-label">Grupo</label>
     			<div class="col-sm-7">
-	      			<select required name="selGrupo" class="form-control" id="selGrupo">
+	      			<select required name="selGrupo" class="form-control" id="grupo">
                 		<option value="">--Selecciona grupo--</option>
+                		<?php
+										include'conexion.php';
+										$conexion = conectar();
+										$query = "SELECT idGrupos, NombreGrupo FROM grupos WHERE idTutores='$cve'" or die("Error in the consult.." . mysqli_error($conexion));
+										$result = $conexion->query($query);
+										while($row = mysqli_fetch_array($result))
+										{
+											echo "<option value='".$row["idGrupos"]."'>".$row["NombreGrupo"]."</option>";
+										 }
+										?>
   					</select><br>
     			</div>
     			<div class="col-sm-2">
-      				<button type="submit" class="btn btn-primary btn-block">Ver listado</button>
+      				<button type="button" class="btn btn-primary btn-block" id="reporte">Ver listado</button>
     			</div>
   			</div>
 		</div>
@@ -30,60 +43,7 @@
 		<div class="panel panel-success">
 			<div class="panel-heading">ISC-20151</div>
 			<div class="table-responsive">
-				<table class="table table-bordered table-hover">
-					<tr>
-						<th class="text-center" colspan="7">REPORTE SEMESTRAL DEL TUTOR</td>
-					</tr>
-					<tr>
-						<td colspan="7">Instituto Tecnológico de Morelia</td>
-					</tr>
-					<tr>
-						<td colspan="2">Nombre del tutor:</td>
-						<td colspan="3">María Yaneth Vega Flores</td>
-						<td colspan="1">Fecha:</td>
-						<td colspan="1">
-							<input type="date" class="form-control" name="fecReporte">
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2">Programa educativo:</td>
-						<td colspan="1"></td>
-						<td colspan="1">Grupo:</td>
-						<td colspan="1">ISC-20151</td>
-						<td colspan="1">Hora:</td>
-						<td colspan="1" contenteditable="true"></td>
-					</tr>
-					<tr>
-						<th>No.</th>
-						<th>No. de control</th>
-						<th>Lista de estudiantes</th>
-						<th>Calificación</th>
-						<th>% Asistencia</th>
-						<th>Área canalizada</th>
-						<th>Observaciones</th>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>14121253</td>
-						<td>Cesar Rafael Aguado Boyzo</td>
-						<td contenteditable="true"></td>
-						<td contenteditable="true"></td>
-						<td contenteditable="true"></td>
-						<td contenteditable="true"></td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>14121254</td>
-						<td>Sergio Armando Alcazar Calderón</td>
-						<td contenteditable="true"></td>
-						<td contenteditable="true"></td>
-						<td contenteditable="true"></td>
-						<td contenteditable="true"></td>
-					</tr>
-					<tr>
-						<td colspan="2">Observaciones:</td>
-						<td colspan="5" contenteditable="true"></td>
-					</tr>
+				<table class="table table-bordered table-hover" id="table1">
 				</table>
 			</div>
 		</div>
