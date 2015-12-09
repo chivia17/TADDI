@@ -2,9 +2,9 @@
 	session_start();
 	include '../../contents/conexion.php';
 	$conexion = conectar();
-	if(isset($_SESSION['nc']) && isset($_SESSION['receptor']))
+	if(isset($_SESSION['rfc']) && isset($_SESSION['receptor']))
 	{
-		$query = "SELECT emisor, contenido FROM chat WHERE (emisor = '".$_SESSION['nc']."' AND receptor = '".$_SESSION['receptor']."' ) OR (emisor = '".$_SESSION['receptor']."' AND receptor = '".$_SESSION['nc']."') ORDER BY id DESC";
+		$query = "SELECT emisor, contenido FROM chat WHERE (emisor = '".$_SESSION['rfc']."' AND receptor = '".$_SESSION['receptor']."' ) OR (emisor = '".$_SESSION['receptor']."' AND receptor = '".$_SESSION['rfc']."') ORDER BY id DESC";
 		if($result = $conexion->query($query))
 		{
 			if($result->num_rows > 0)
@@ -18,7 +18,7 @@
 			}
 			else
 			{
-				echo $_SESSION['nc'];
+				//echo $_SESSION['rfc'];
 				?>
 				<strong align = 'center'>No hay mensajes que mostrar</strong>
 				<?php

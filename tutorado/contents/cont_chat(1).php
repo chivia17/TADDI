@@ -2,12 +2,14 @@
 	@session_start();
 	include 'contents/conexion.php';
 	unset($_SESSION['receptor']);
-	$tutor = null;
+	$tutor = '';
 	$conexion = conectar();
 	$query = "SELECT idTutores FROM alumnos INNER JOIN grupos ON alumnos.idGrupos = grupos.idGrupos WHERE idAlumnos = '".$_SESSION['nc']."'";
 	if($result = $conexion->query($query)){
-		$row = mysql_fetch_array($result);
-		$tutor = $row['idTutores'];
+		if($result->num_rows == 1){
+			$array = mysqli_fetch_array($result);
+			$tutor = $array['idTutores'];
+		}
 	}
 ?>
 <script type="text/javascript">
@@ -20,6 +22,7 @@ function quitar_input(){
 function poner_input(){
 	document.getElementById('td').style.display = 'block';
 	document.getElementById('receptor').value = "";
+	<?php $_SESSION['receptor'] = $tutor ?>
 }
 
 </script>

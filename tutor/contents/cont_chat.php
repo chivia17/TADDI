@@ -1,15 +1,14 @@
 <?php
 @session_start();
 include '../contents/conexion.php';
-	if(isset($_SESSION['nc']))
+	if(isset($_SESSION['rfc']))
 	{
 ?>
 <div>
 	<table width = "800" height = "500">
 		<form method = "post" action = "contents/cont_env_men_chat.php">
 		<tr>
-			<?php if(isset($_POST['receptor'])){
-				if($_POST['combo_chat'] == 'alumno'){
+			<?php if(isset($_POST['receptor']) && !isset($_SESSION["receptor"])){
 					unset($_SESSION['receptor']);
 					$conexion = conectar();
 						$query = "SELECT nombreAlumno FROM alumnos WHERE idAlumnos = '".$_POST['receptor']."'";
@@ -24,7 +23,6 @@ include '../contents/conexion.php';
 						else{
 							echo '<script language="javascript">alert("Error!");</script>';
 						}
-					}
 				}
 			?>
 		</tr>
@@ -35,7 +33,7 @@ include '../contents/conexion.php';
 			<td><input type = "text" name = "mensaje"/> <button type = "submit" name = "enviar">Enviar</button></td>
 		</tr>
 		<tr>
-			<td>Estas conectado como: <?php echo $_SESSION['nc']; ?></td>
+			<td>Estas conectado como: <?php echo $_SESSION['rfc']; ?></td>
 		</tr>	
 		</form>
 	</table>
