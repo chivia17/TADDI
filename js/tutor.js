@@ -43,10 +43,18 @@ $(document).ready(main);
         });
      });
 
-     $('#salon').click(function(){        //Buscar alumno Baja logica Alumno
+     $('#salon').click(function(){        
        $gp= $('#grupo').val();
       var query = "SELECT * FROM alum WHERE activo = 1 AND idGrupos ="+$gp;
        $.post("./contents/tabla_alumno1.php", { query: query}, function(data){
+            $("#table1").html(data);
+        });
+     });
+
+     $('#reporte').click(function(){        
+       $gp= $('#grupo').val();
+      var query = "SELECT * FROM alum WHERE activo = 1 AND idGrupos ="+$gp;
+       $.post("./contents/tabla_alumno2.php", { query: query, gp: $gp}, function(data){
             $("#table1").html(data);
         });
      });
