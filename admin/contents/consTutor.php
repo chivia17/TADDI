@@ -35,7 +35,7 @@ $pdf->Ln(10);
 $pdf->SetFont('Arial','',8);
 $pdf->Cell(195,60,$fecha,10,0,'R');
 $pdf->Ln(5);
-$pdf->Cell(195,60,utf8_decode('ASUNTO:                        CONSTACIA TUTORÍAS'),10,0,'R');
+$pdf->Cell(195,60,utf8_decode('ASUNTO:                        CONSTANCIA TUTORÍAS'),10,0,'R');
 $pdf->Ln(25);
 $pdf->SetFont('Arial','B',12);
 $pdf->Cell(60,60,utf8_decode('A QUIEN CORRESPONDA:'),10,0,'R');

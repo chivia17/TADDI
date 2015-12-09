@@ -92,4 +92,22 @@ $(document).ready(main);
        location.href= "../contents/logout.php";
      });
 
+     $('#btCE').click(function(){     //Boton Buscar Capturar Expediente
+       $nc = $('#noControl').val();
+       $gp= $('#grupo').val();
+       var query = "SELECT ob_cues FROM alumnos WHERE idAlumnos="+$nc+" AND idGrupos="+$gp;
+       $.post("./contents/conExp.php", { query : query }, function(data){
+              $("#txaNotas").html(data);
+        });
+     });
+
+
+     $('#btnGrdCambios').click(function(){     //Boton Guardar Capturar Expediente
+        ex = $('#txaNotas').val();
+        nc = $('#noControl').val();
+        $.post("./contents/actExp.php", { ex : ex, nc : nc }, function(data){
+               alert(data);
+         });
+      });
+
 }

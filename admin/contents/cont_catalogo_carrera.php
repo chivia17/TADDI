@@ -14,7 +14,6 @@
  								<td><strong>Cve Carrera</strong></td>
   								<td><strong>Nom Carrera</strong></td>
 							</tr>
-
 	 					<?php
 						 include'conexion.php';
              $conexion = conectar();
