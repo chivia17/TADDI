@@ -1,3 +1,6 @@
+<?php
+require_once("comboBox_carreras.php");
+?>
 <div class="contenido container">
 	<div class="titulo text-center">
 		<h2><b>CONSTANCIA TUTOR</b></h2>
@@ -8,28 +11,36 @@
 				  <div class="form-group">
 				    <label for="sele" class="col-md-2 control-label">Tutor</label>
 				    <div class="col-md-6">
-				      <select required name="tutor" class="form-control">    
-   					    		<option value="">TUTOR</option>
+				      <select required name="tutor" id="selCTT" class="form-control">
+								<?php
+									 $carreras=getTutores();
+									 echo "<option value=''>--Selecciona Tutor--</option>";
+											 foreach ($carreras as $indice => $registro) {
+													echo "<option value='".$registro["idTutores"]."'>".$registro["nombreTutor"]."</option>";
+												}
+								?>
   							</select>
 				    </div>
 				  </div>
-				  	
+
 				  <div class="form-group">
 				    <label for="sel" class="col-md-2 control-label">Periodo</label>
 				    <div class="col-md-6">
-  							<select required name="periodo" class="form-control">
-  								<option value="">PERIODO</option>    
-   					    		<option value="e_j">Enero-Junio</option>
-     				    		<option value="a_d">Agosto-Diciembre</option>
-       							<option value="v">Verano</option>
+  							<select required name="periodo" id="selTP" class="form-control">
+									<?php
+										 $carreras=getPeriodos();
+										 echo "<option value=''>--Selecciona periodo--</option>";
+												 foreach ($carreras as $indice => $registro) {
+														echo "<option value='".$registro["idPeriodo"]."'>".$registro["periodo"]."</option>";
+													}
+									?>
   							</select>
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="sel" class="col-md-2 control-label">Grupo</label>
 				    <div class="col-md-6">
-  							<select required name="periodo" class="form-control">    
-   					    		<option value="">GRUPO</option>
+  							<select required name="periodo" id="selCTG" class="form-control">
   							</select>
 				    </div>
 				  </div>

@@ -33,5 +33,10 @@ $(document).ready(main);
       location.href= "../contents/logout.php";
     });
 
+    $('#selTP').on("change",function()    //Select Periodo Constancia Carreras
+    {
+      alert("entre");
+     });
+
 
    }
