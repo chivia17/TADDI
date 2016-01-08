@@ -1,7 +1,6 @@
 $(document).ready(main);
 	function main(){
 		$('#camb').click(function(){
-			alert("Hola compa desde Cambiar")
 		});
 
 		$('#busc').click(function(){
@@ -19,7 +18,6 @@ $(document).ready(main);
 
 
 		$('#imp').click(function(){
-			alert("Hola compa desde Imprimir")
 
 
 

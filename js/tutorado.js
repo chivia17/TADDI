@@ -13,7 +13,6 @@ function main(){
           alert("Usuario o Contraseña Incorrecta");
         }
         else if(data == 1){
-          alert("Usuario o Contraseña correcta");
           location.href= "./index.php";
         }
     }});

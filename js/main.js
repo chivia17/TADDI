@@ -39,10 +39,6 @@ $(document).ready(main);
 		});
 		});
 
-		$('#imp').click(function(){          //imprimir evaluacion tutor
-			alert("Hola compa desde Imprimir")
-
-		});
 
 		$('#selectCarrera').on("change",function() //Select carre_tutor
 	   {
@@ -76,7 +72,6 @@ $(document).ready(main);
 	     	alert("Usuario o Contraseña Incorrecta");
 	    }
 	    else if(data == 1){
-	      alert("Usuario o Contraseña correcta");
 	      location.href= "./index.php";
 	    /*  	window.open('./index.php', '_self');*/
 
@@ -104,7 +99,6 @@ $(document).ready(main);
 	        alert("Usuario o Contraseña Incorrecta");
 	      }
 	      else if(data == 1){
-	        alert("Usuario o Contraseña correcta");
 	        location.href= "./index.php";
 	      }
 
