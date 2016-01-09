@@ -32,7 +32,7 @@
 	}
     }
 		else {
-			echo '<script>alert("Alumno no encontrado")</script>';
+			echo '<script>alert("No hay alumnos en el grupo")</script>';
 		}
 		$result->close();
 		mysqli_close($conexion);
