@@ -11,33 +11,23 @@ require_once("comboBox_carreras.php");
   			<div class="form-group">
 				<label for="selectCarrera" class="col-sm-2 control-label">Carrera</label>
 				<div class="col-sm-8">
-  					<select required name="cveCarrera" class="form-control cboton">    
+  					<select required name="cveCarrera" class="form-control cboton" id="selCTCA">
    					    		<option value="" name="">-Seleccione una carrera-</option>
-   					    		<?php
-                    $a=actC();
-                    function actC(){
-        							$carreras=getCarreras();
-        							foreach ($carreras as $indice => $registro) {
-        								echo "<option name='".$registro["cveCarrera"]."'>".$registro["cveCarrera"]."</option>";
-                      }
-        							}
-            			   ?>
+										<?php
+											 $carreras=getCarreras();
+											 echo "<option value=''>--Selecciona Carrera--</option>";
+													 foreach ($carreras as $indice => $registro) {
+															echo "<option value='".$registro["cveCarrera"]."'>".$registro["NombreCarrera"]."</option>";
+														}
+										?>
   							</select>
 				</div>
 			</div>
-			<div class="form-group">
-				<label for="selectPeriodo" class="col-sm-2 control-label">Grupo</label>
-				<div class="col-sm-4">
-  					<select required name="idGrupos" class="form-control cboton2">    
-   						<option value="">-Seleccione un grupo-</option>   						
-  					</select>
-				</div>
-			</div>			
-			<div class="form-group">
-    			<div class="col-sm-offset-2 col-sm-6">
-      				<button type="submit" class="btn btn-default">Imprimir</button>
-    			</div>
-  			</div>
+			<div class="panel panel-success">
+					<div class="panel-heading">Grupos de tutoría</div>
+				<table class="table" id="table1">
+					</table>
+			</div>
 		</form>
 	</div>
 </div>
