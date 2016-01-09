@@ -30,13 +30,6 @@ $nombA = $resultado ["nombDire"];
 $apellPA = $resultado ["apellPDire"];
 $apellMA = $resultado ["apellMDire"];
 
-$query = $conexion->consulta("SELECT * FROM directivos WHERE puesto = 'Encargado Subdireccion de Servicios Administrativo'");
-$resultado = mysql_fetch_array($query);
-$CveSA = $resultado ["CveDirec"];
-$nombSA = $resultado ["nombDire"];
-$apellPSA = $resultado ["apellPDire"];
-$apellMSA = $resultado ["apellMDire"];
-
 $query = $conexion->consulta("SELECT * FROM logos");
 $resultado = mysql_fetch_array($query);
 $idLogo = $resultado ["idLogo"];
@@ -62,7 +55,7 @@ $url = $resultado ["url"];
 				    <label for="rfc" class="col-md-3 control-label">Clave de la Institución</label>
 				    <div class="col-md-3">
 				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="cvetec" name="cvetec" placeholder="Clave" value = "<?php echo $ClaInsti ?>" disabled required>
+				      type="text" class="form-control" id="cvetec" name="cvetec" placeholder="Clave" value = "<?php echo $ClaInsti ?>">
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -76,7 +69,7 @@ $url = $resultado ["url"];
 				    <label for="nomcor" class="col-md-3 control-label">Nombre del Encargado de la Dirección del Instituto</label>
 				    <div class="col-md-2">
 				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="CveDI" name="CveDI" placeholder="Clave" value = "<?php echo $CveDirec ?>" required>
+				      type="text" class="form-control" id="CveDI" name="CveDI" placeholder="RFC" value = "<?php echo $CveDirec ?>" required>
 				    </div>
 				    <div class="col-md-2">
 				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
@@ -92,10 +85,10 @@ $url = $resultado ["url"];
 				    </div>
 				  </div>
 				  <div class="form-group">
-				    <label for="nomcor" class="col-md-3 control-label">Nombre Subdirección Académia</label>
+				    <label for="nomcor" class="col-md-3 control-label">Nombre Subdirector Académico</label>
 				    <div class="col-md-2">
 				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="CveSA" name="CveSA" placeholder="Clave" value = "<?php echo $CveA ?>" required>
+				      type="text" class="form-control" id="CveSA" name="CveSA" placeholder="RFC" value = "<?php echo $CveA ?>" required>
 				    </div>
 				    <div class="col-md-2">
 				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
@@ -108,44 +101,6 @@ $url = $resultado ["url"];
 				    <div class="col-md-2">
 				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
 				      type="text" class="form-control" id="apmSA" name="apmSA" placeholder="Apellido Materno" value = "<?php echo $apellMA ?>" required>
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label for="nomcor" class="col-md-3 control-label">Nombre Subdirección de Planeación y Vinculación</label>
-				    <div class="col-md-2">
-				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="CvePV" name="CvePV" placeholder="Clave" value = "<?php echo $CvePV ?>" required>
-				    </div>
-				    <div class="col-md-2">
-				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="nomPV" name="nomPV" placeholder="Nombre" value = "<?php echo $nombPV ?>" required>
-				    </div>
-				    <div class="col-md-2">
-				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="appPV" name="appPV" placeholder="Apellido Paterno" value = "<?php echo $apellPPV ?>" required>
-				    </div>
-				    <div class="col-md-2">
-				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="apmPV" name="apmPV" placeholder="Apellido Materno" value = "<?php echo $apellMPV ?>" required>
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label for="nomcor" class="col-md-3 control-label">Nombre Subdirección de Servicios Administrativos</label>
-				    <div class="col-md-2">
-				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="CveSSA" name="CveSSA" placeholder="Clave" value = "<?php echo $CveSA ?>" required>
-				    </div>
-				    <div class="col-md-2">
-				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="nomSSA" name="nomSSA" placeholder="Nombre" value = "<?php echo $nombSA ?>" required>
-				    </div>
-				    <div class="col-md-2">
-				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="appSSA" name="appSSA" placeholder="Apellido Paterno" value = "<?php echo $apellPSA ?>" required>
-				    </div>
-				    <div class="col-md-2">
-				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
-				      type="text" class="form-control" id="apmSSA" name="apmSSA" placeholder="Apellido Materno" value = "<?php echo $apellMSA ?>" required>
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -165,12 +120,12 @@ $url = $resultado ["url"];
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 				  <div class="form-group">
 				    <div class="col-lg-offset-2 col-lg-10">
 				      <button type="submit" id="guardartec" name="guardartec" class="btn btn-default">Guardar</button>
 				    </div>
 				  </div>
 				</form>
-			</div>	
+			</div>
 </div>

@@ -17,23 +17,17 @@ $conexion = new MySQL();
 $query = $conexion->consulta("BEGIN");
 if (!empty($_POST["nomtec"]) && !empty($_POST["nomDA"]))
 {
-	$query = $conexion->consulta("UPDATE institucion SET NomInsti = '".$_POST["nomtec"]."', JefeDA = '".$_POST["nomDA"]."'");
+	$query = $conexion->consulta("DELETE FROM institucion WHERE cveIns = 1");
+	$query = $conexion->consulta("INSERT INTO institucion (ClaInsti,NomInsti,JefeDA,cveIns) VALUES ('".$_POST ["cvetec"]."','".$_POST["nomtec"]."','".$_POST["nomDA"]."',1)");
 }
+
+
 if (!empty($_POST ["CveDI"]) && !empty($_POST ["nomDI"]) && !empty($_POST ["appDI"]) && !empty($_POST ["apmDI"]))
 {
 	$query = $conexion->consulta("DELETE FROM directivos WHERE puesto = 'Director General'");
 	$query = $conexion->consulta("INSERT INTO directivos (CveDirec, nombDire, apellPDire, apellMDire, puesto) VALUES ('".$_POST ["CveDI"]."','".$_POST ["nomDI"]."','".$_POST ["appDI"]."','".$_POST ["apmDI"]."','Director General')");
 }
-if (!empty($_POST ["CvePV"]) && !empty($_POST ["nomPV"]) && !empty($_POST ["appPV"]) && !empty($_POST ["apmPV"]))
-{
-	$query = $conexion->consulta("DELETE FROM directivos WHERE puesto = 'Encargado Subdireccion de Planeacion y Vinculacion'");
-	$query = $conexion->consulta("INSERT INTO directivos (CveDirec, nombDire, apellPDire, apellMDire, puesto) VALUES ('".$_POST ["CvePV"]."','".$_POST ["nomPV"]."','".$_POST ["appPV"]."','".$_POST ["apmPV"]."','Encargado Subdireccion de Planeacion y Vinculacion')");
-}
-if (!empty($_POST ["CveSSA"]) && !empty($_POST ["nomSSA"]) && !empty($_POST ["appSSA"]) && !empty($_POST ["apmSSA"]))
-{
-	$query = $conexion->consulta("DELETE FROM directivos WHERE puesto = 'Encargado Subdireccion de Servicios Administrativo'");
-	$query = $conexion->consulta("INSERT INTO directivos (CveDirec, nombDire, apellPDire, apellMDire, puesto) VALUES ('".$_POST ["CveSSA"]."','".$_POST ["nomSSA"]."','".$_POST ["appSSA"]."','".$_POST ["apmSSA"]."','Encargado Subdireccion de Servicios Administrativo')");
-}
+
 if (!empty($_POST ["CveSA"]) && !empty($_POST ["nomSA"]) && !empty($_POST ["appSA"]) && !empty($_POST ["apmSA"]))
 {
 	$query = $conexion->consulta("DELETE FROM directivos WHERE puesto = 'Encargado Subdireccion Academica'");
