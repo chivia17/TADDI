@@ -1,0 +1,33 @@
+service dhcp 
+ip dhcp exclude address
+ip dhcp pool NOMBRE
+default router
+network 
+lease tiempo - days/hrs 
+encapsulation ppp
+access-list 1 permit A.B.C.D 0.0.0.0
+pat ip nat inside source list 1 interface s0/0/0 overload
+ip nat inside
+ip nat outside
+pat+ ip nat pool RANGOPUBLICO 200.1.1.2 200.1.1.4 netmask 255.255.255.248
+ip nat inside source list 1 pool RANGOPUBLICO
+ip nat inside source static 192.168.0.10 200.1.1.5
+ip nat pool RANGO_PAT_PUBLICO 200.1.1.1 200.1.1.4 netmask 255.255.255.248
+encapsulation frame-relay
+frame-relay map 0.0.0.0 dlci broadcast cisco
+frame-relay interface-dlci #
+3.    router ospf process-id 
+4.    network ip-address wildcard-mask area area-id 
+3.    interface type number 
+4.    ip ospf cost cost 
+5.    ip ospf retransmit-interval seconds 
+6.    ip ospf transmit-delay seconds 
+7.    ip ospf priority number-value 
+8.    ip ospf hello-interval seconds 
+9.    ip ospf dead-interval seconds 
+10    ip ospf authentication-key key 
+11.    ip ospf message-digest-key key-id md5 key 
+12.    ip ospf authentication [message-digest | null] 
+13.    end 
+access-list 101 deny tcp host 10.1.1.2 any eq telnet
+ip access-group 101 in

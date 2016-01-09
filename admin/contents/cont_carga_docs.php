@@ -12,6 +12,12 @@
     			</div>
   			</div-->
   			<div class="form-group">
+  				<div class="form-group">
+				<label for="depcri" class="col-md-2 control-label">Descripcion:</label>
+				<div class="col-md-6">
+				    <input type="text" class="form-control" id="depcri" name="depcri" placeholder="Descripcion" required>
+				</div>
+				</div>
 				<label for="fileDoc" class="col-sm-2 control-label">Documento a cargar</label>
 				<div class="col-sm-10">
 					<div class="fileinput fileinput-new input-group" data-provides="fileinput">
@@ -22,10 +28,11 @@
 						<span class="input-group-addon btn btn-default btn-file">
 							<span class="fileinput-new" >Seleccionar documento</span>
 							<span class="fileinput-exists">Cambiar</span>
-							<input required type="file" name="userfile" id="userfile">
+							<input type="file" name="userfile" id="userfile" required>
 						</span>
 						<a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
 					</div>
+					
 				</div>
 			</div>
   			<div class="form-group">
