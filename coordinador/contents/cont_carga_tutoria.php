@@ -1,3 +1,6 @@
+<?php
+$cve = $_SESSION["cveCar"];
+?>
 <div class="" id="contenido">
 	<div class="titulo text-center">
 		<h2><b>CARGAS POR TUTORÍA</b></h2>
@@ -5,45 +8,40 @@
 	<div class="container">
 		<br>
 		<form class="form-horizontal" action="" method="">
-  			<div class="form-group">
-				<label for="selectCarrera" class="col-sm-2 control-label">Carrera</label>
-				<div class="col-sm-8">
-  					<select required name="selectCarrera" class="form-control">    
-   						<option value="">Seleccionar Carrera</option>
-  					</select>
-				</div>
+			<div class="panel panel-success">
+		  		<div class="panel-heading">Grupos de tutoría</div>
+		 		<table class="table" id="table1">
+					<?php
+					include'conexion.php';
+					$conexion = conectar();
+					$query = "SELECT idGrupos,NombreGrupo, Hora, Salon FROM grupos WHERE cveCarrera='$cve'" or die("Error in the consult.." . mysqli_error($conexion));
+					$result = $conexion->query($query);
+					echo "<tr>
+					  <td><strong>Grupo</strong></td>
+					  <td><strong>Hora</strong></td>
+					  <td><strong>Salón</strong></td>
+					  <td class='text-center'><strong>Lista</strong></td>
+					  </tr>";
+					while($row = mysqli_fetch_array($result))
+					{
+					 $id=$row["idGrupos"];
+					 $hora=$row["Hora"];
+					 $salon=$row["Salon"];
+					 echo "<tr><td width=\"20%\"><font face=\"verdana\">" .
+					 $row["NombreGrupo"] . "</font></td>";
+					 echo "<td width=\"20%\"><font face=\"verdana\">" .
+					 $row["Hora"] . "</font></td>";
+					 echo "<td width=\"20%\"><font face=\"verdana\">" .
+					 $row["Salon"] . "</font></td>";
+					 echo "	<td class='text-center'>
+					 <a href='contents/cargatutoriaPDF.php?id=$id&ho=$hora&sa=$salon' download>
+					 <span class='glyphicon glyphicon-download-alt'></span></a></td>";
+					}
+					$result->close();
+					mysqli_close($conexion);
+					?>
+		  		</table>
 			</div>
-			<div class="form-group">
-    			<div class="col-sm-offset-2 col-sm-6">
-      				<button type="submit" class="btn btn-default">Consultar</button>
-    			</div>
-  			</div>
 		</form>
-		<div class="row">
-				<div class="col-sm-12">
-					<div class="panel panel-default">
-						<div class="panel-heading"><strong>Carrera</strong></div>
-						<table class="table table-bordered text-center">
-							<tr>
-								<td><strong>Grupo</strong></td>
-								<td><strong>Salón</strong></td>
-								<td><strong>Hora</strong></td>
-								<td><strong>Profesor</strong></td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			<div class="form-group">
-				<div class="col-sm-offset-10 col-sm-2">
-					<button type="submit" class="btn btn-primary" name="btnBuscar">Imprimir</button>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
