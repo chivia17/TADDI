@@ -58,8 +58,7 @@ $(document).ready(main);
         });
      });
 
-
-     $('#alta').click(function(){            //Alta logica Alumno
+     $('#alta').click(function(){            //Alta logica Alumno        
         var nc= $('#noControl').val();
         var parametros = {"nc" : nc};
         $.ajax({
@@ -67,22 +66,30 @@ $(document).ready(main);
          url: "./contents/altaLog.php",
          data: parametros,
          success: function(data){
-                alert(data);
-       }});
-
+          alert("Error al dar de alta");        
+       },
+       error: function(){          
+          alert("Alta realizada");                            
+       }
      });
 
+     });    
 
-     $('#baja').click(function(){            //Baja logica Alumno
+     $('#baja').click(function(){            //Baja logica Alumno        
         var nc= $('#noControl').val();
         var parametros = {"nc" : nc};
         $.ajax({
          type: "POST",
          url: "./contents/bajaLog.php",
          data: parametros,
-         success: function(data){
-                alert(data);
-       }});
+         success: function(data){                
+          alert("Error al dar de baja");                                                
+       },
+       error: function(){
+        alert("Baja realizada");    
+          
+       }
+     });
      });
 
      $('#cam').click(function(){        //Buscar alumno Alta logica Alumno
