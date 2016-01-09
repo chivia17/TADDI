@@ -25,7 +25,7 @@ $cve = $_SESSION["rfc"];
 						<span class="input-group-addon btn btn-default btn-file">
 							<span class="fileinput-new" >Seleccionar documento</span>
 							<span class="fileinput-exists">Cambiar</span>
-							<input type="file" name="userfile" id="userfile" required>
+							<input type="file" name="userfile" id="userfile" >
 						</span>
 						<a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Eliminar</a>
 					</div>

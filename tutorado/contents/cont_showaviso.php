@@ -21,6 +21,7 @@ $rfc = $_SESSION["nc"];
 	 						$nomArc="";
 	 						$conexion = conectar();
 	 						$query = $conexion->query("SET NAMES 'utf8'");
+	 						$resultado = $conexion->query("CALL borrarAvisos()");
 	 						$resultado = $conexion->query("SELECT idGrupos from alumnos where idAlumnos='".$rfc."'");
 							while($row = $resultado->fetch_assoc())
      						{
@@ -31,7 +32,7 @@ $rfc = $_SESSION["nc"];
      						{
      						 $avi=$row["Aviso"];
      						 $nomArc=$row["nomArchivo"];
-     						 if(is_null($nomArc)){
+     						 if($nomArc==""){
      						 	echo "<tr><td>$avi</td><td class=text-center>No hay Archivo
 								</td><td class=text-center>No hay Archivo
 								</td></tr>";
@@ -39,8 +40,8 @@ $rfc = $_SESSION["nc"];
      						 else
      						 {
      						 	$url="../contents/Archivos/".$nomArc;
-     						 	echo "<tr><td>$avi</td><td class=text-center><a href=$url>Ver</a>
-								</td><td class=text-center><a href=$url download=$nomArc>Descargar</a>
+     						 	echo "<tr><td>$avi</td><td class=text-center><a href=$url ><span class='glyphicon glyphicon-eye-open'></span></a>
+								</td><td class=text-center><a href=$url download=$nomArc><span class='glyphicon glyphicon-download-alt'></span></a>
 									</td></tr>";
      						 }
      						 $nomArc="";

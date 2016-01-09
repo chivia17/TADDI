@@ -21,6 +21,7 @@ $rfc = $_SESSION['rfc'];
 	 						$nomArc="";
 	 						$conexion = conectar();
 	 						$query = $conexion->query("SET NAMES 'utf8'");
+	 						$resultado = $conexion->query("CALL borrarAvisos()");
 	 						$resultado = $conexion->query("SELECT cveCarrera from tutores where idTutores='".$rfc."'");
 							while($row = $resultado->fetch_assoc())
      						{
@@ -31,7 +32,7 @@ $rfc = $_SESSION['rfc'];
      						{
      						 $avi=$row["Aviso"];
      						 $nomArc=$row["nomArchivo"];
-     						 if(is_null($nomArc)){
+     						 if($nomArc==""){
      						 	echo "<tr><td>$avi</td><td class=text-center>No hay Archivo
 								</td><td class=text-center>No hay Archivo
 								</td></tr>";
