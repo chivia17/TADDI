@@ -5,26 +5,18 @@
 	<div class="container">
 		<br>
 		<div class="row">
-			<div class="col-xs-12 col-md-6 col-lg-3">
-    			<a href="#" class="thumbnail">
-      				<img src="../img/itmg.png" alt="..." style="width: 200px; height: 200px;">
-    			</a>
-  			</div>
-  			<div class="col-xs-12 col-md-6 col-lg-3">
-    			<a href="#" class="thumbnail">
-      				<img src="../img/EscudoITM2013.png" alt="..." style="width: 200px; height: 200px;">
-    			</a>
-  			</div>
-  			<div class="col-xs-12 col-md-6 col-lg-3">
-    			<a href="#" class="thumbnail">
-      				<img src="../img/sep_vertical.png" alt="..." style="width: 200px; height: 200px;">
-    			</a>
-  			</div>
-  			<div class="col-xs-12 col-md-6 col-lg-3">
-    			<a href="#" class="thumbnail">
-      				<img src="../img/EscudoITM2013.png" alt="..." style="width: 200px; height: 200px;">
-    			</a>
-  			</div>
+<?php
+              $dir="../img/*";
+              foreach (glob($dir) as $filename) {
+                $aux="$filename";
+                $aux = substr($aux, 21);
+                  echo "<div class='col-xs-12 col-md-6 col-lg-3'>
+          <a href=$filename class='thumbnail'>
+              <img src=$filename alt='...' style='width: 200px; height: 200px;'>
+          </a>
+        </div>";
+                }
+                ?>
 		</div>
 	</div>
 </div>
