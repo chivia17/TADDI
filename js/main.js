@@ -7,7 +7,6 @@ $(document).ready(main);
 			$.post("../contents/pro_camb_gru.php", { nc: nc , gru : gru }, function(data){
 	 		alert(data);
 	 		 });
-
 		});
 
 		$('#camg').click(function(){      //Cambio Grupo
@@ -97,11 +96,10 @@ $(document).ready(main);
 
 	      if(data == 0){
 	        alert("Usuario o Contraseña Incorrecta");
-	      }
-	      else if(data == 1){
-	        location.href= "./index.php";
-	      }
-
+	       }
+	        else if(data == 1){
+	          location.href= "./index.php";
+	       }
 	       });
 	     });
 
@@ -136,6 +134,15 @@ $(document).ready(main);
 		 });
 
 
-
+		 $('#selCTCA').on("change",function()    //Select Carrera Constancia carga tutorias
+		 {
+			$("#selCTCA option:selected").each(function () {
+				 cc = $(this).val();
+				$.post("./contents/getInfGrup.php", { cc: cc },
+				 function(data){
+					 $("#table1").html(data);
+						});
+			 });
+			});
 
 }
