@@ -36,7 +36,7 @@ if(isset($_POST['noControl'])){
 			<div class="form-group">
 				<label for="noControl" class="col-sm-4 control-label">Numero de Control</label>
 				<div class="col-sm-4">
-				    <input type="text" class="form-control" id="noControl" name="noControl" placeholder="Número de control" value = <?php echo $no_control; ?> required>
+				    <input type="text" class="form-control" id="noControl" name="noControl" placeholder="Número de control" value = <?php echo $no_control; ?>>
 				</div>
 				<div class="col-sm-2">
       				<button type="submit" class="btn btn-default btn-block" onclick = "buscar()">Buscar</button>
@@ -60,10 +60,6 @@ if(isset($_POST['noControl'])){
     			<label for="carAlumno" class="col-sm-1 control-label">Carrera</label>
     			<div class="col-sm-6">
       				<input type="text" class="form-control" id="carAlumno" name="" readonly value = "<?php echo $carrera; ?>">
-    			</div>
-    			<label for="semAlumno" class="col-sm-1 control-label">Semestre</label>
-    			<div class="col-sm-1">
-      				<input type="text" class="form-control" id="semAlumno" name="" readonly value = "<?php echo $semestre; ?>">
     			</div>
     			<label for="gpoAlumno" class="col-sm-1 control-label">Grupo</label>
     			<div class="col-sm-2">
