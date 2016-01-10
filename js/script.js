@@ -18,19 +18,19 @@ function validar_changePsw(){
 function validar_alta_carr(le,Le2){
 	document.getElementById("errors_carr").innerHTML = "";
 	val2 = document.getElementById(le).value;	
-		if (validar_cve(val2)){
-			return true;
+	val3=document.getElementById(Le2).value;
+		if (validar_cve(val2)){			
+			if(validar_let(val3)){
+				return true;
+			}			
+
+			else {
+				document.getElementById("errors_carr").innerHTML = "<p class='text-center text-danger'>¡Formato de nombre Incorrecto!</p>";
+				return false;
+			}
 		}
 		else{
 			document.getElementById("errors_carr").innerHTML = "<p class='text-center text-danger'>¡Formato de clave Incorrecto!</p>";
-			return false;
-		}
-		val3 = document.getElementById(le2).value;
-		if (validar_let(val3)){
-			return true;
-		}
-		else{
-			document.getElementById("errors_carr").innerHTML = "<p class='text-center text-danger'>¡Error en el nombre de la carrera!</p>";
 			return false;
 		}
 	}
@@ -163,7 +163,7 @@ function validar_num(nu){
 
 function validar_let(let){
 	valor = let;
-	var patron = /^[a-zA-Z+\s]*$/;
+	var patron = /^(([A-Z])+\s?)*$/;
     if(!valor.search(patron)) {
 	  return true;
 	}
