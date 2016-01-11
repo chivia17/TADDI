@@ -20,7 +20,7 @@ $cve = $_SESSION["cveCar"];
 					  <td><strong>Grupo</strong></td>
 					  <td><strong>Hora</strong></td>
 					  <td><strong>Salón</strong></td>
-					  <td class='text-center'><strong>Lista</strong></td>
+					  <td class='text-center'><strong>Descargar</strong></td>
 					  </tr>";
 					while($row = mysqli_fetch_array($result))
 					{
