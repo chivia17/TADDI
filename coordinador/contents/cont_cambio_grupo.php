@@ -15,6 +15,7 @@ $cve = $_SESSION["cveCar"];
 				</div>
 				<div class="col-md-2">
 				    <button type="button" class="btn btn-default" id="busc1">Buscar</button>
+            <input type="hidden" id="cvec" value="<?=$_SESSION['cveCar'];?>"></input>
 				</div>
 			</div>
 			<div class="form-group">

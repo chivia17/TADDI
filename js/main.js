@@ -28,9 +28,9 @@ $(document).ready(main);
 
 		$('#busc1').click(function(){           //Buscar alumno Cambio Grupo y select grupos
 			$nc= $('#nc1').val();
+      var id_ca = $('#cvec').val();
 			var query = "SELECT * FROM alum WHERE idAlumnos="+$nc+" AND activo = 1";
-			var id_ca = "ISIC-2010-224";
-			$.post("./contents/tabla_alumno.php", { query: query}, function(data){
+			$.post("./contents/tabla_alumno.php", { query: query, id_ca: id_ca}, function(data){
 				 $("#table1").html(data);
 		 });
 		  $.post("./contents/grupos.php", { id_ca: id_ca }, function(data){
