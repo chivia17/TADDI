@@ -120,7 +120,8 @@ function validar_rfc(rf) {
 	rfc = rf;
 	if (rfc.length == 13)
 	{
-		var valid = '^(([A-Z]|[a-z]|\s){1})(([A-Z]|[a-z]){3})([0-9]{6})((([A-Z]|[a-z]|[0-9]){3}))';
+		//var valid = '^(([A-Z]|[a-z]|\s){1})(([A-Z]|[a-z]){3})([0-9]{6})((([A-Z]|[a-z]|[0-9]){3}))';
+		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{1}[0-9]{6}-([A-Z]|[0-9]){3})$/;
 		var validRfc=new RegExp(valid);
 		var matchArray=rfc.match(validRfc);
 		if (matchArray==null) {
