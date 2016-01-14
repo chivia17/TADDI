@@ -1,0 +1,55 @@
+<?php
+include'conexion.php';
+include_once('PDFCT.php');
+$ncA = $_GET["nc"];
+$conexion = conectar();
+$result = $conexion->query("SELECT nombre, idGrupos FROM alum WHERE idAlumnos='$ncA'");
+$row = $result->fetch_assoc();
+$alu = $row["nombre"];
+$idG = $row["idGrupos"];
+$result = $conexion->query("SELECT * FROM grup WHERE idGrupos='$idG'");
+$row = $result->fetch_assoc();
+$carr = $row["NombreCarrera"];
+$tut = $row["nombre"];
+$result = $conexion->query("SELECT idPeriodo FROM grupos WHERE idGrupos='$idG'");
+$row = $result->fetch_assoc();
+$nper = $row["idPeriodo"];
+$result = $conexion->query("SELECT * FROM periodo WHERE idPeriodo='$nper'");
+$row = $result->fetch_assoc();
+$per = $row["periodo"];
+$arrayMeses = array('ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO',
+   'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE');
+$fecha="MORELIA, MICH. A ". date("d") ." DE " .$arrayMeses[date('m')-1]. " DEL " . date("Y");
+$pdf = new PDFCT();
+$pdf->AddPage();
+$dep=utf8_decode("DEPENDENCIA:               SUBD. ACADÉMICA");
+$sec=utf8_decode("SECCÍON:               DESAROLLO ACDÉMICO");
+$pdf->Cell(195,60,utf8_decode('DEPENDENCIA:                SUBD. ACADÉMICA'),10,0,'R');
+$pdf->Ln(5);
+$pdf->Cell(195,60,utf8_decode('SECCÍON:                 DESAROLLO ACDÉMICO'),10,0,'R');
+$pdf->Ln(5);
+$pdf->Cell(195,60,utf8_decode('OFICIO:                                    D.A.190.228/2015'),10,0,'R');
+$pdf->Ln(10);
+$pdf->SetFont('Arial','',8);
+$pdf->Cell(195,60,$fecha,10,0,'R');
+$pdf->Ln(5);
+$pdf->Cell(195,60,utf8_decode('ASUNTO:                        LIBERACIÓN DE CRÉDITO COMPLEMENTARIO'),10,0,'R');
+$pdf->Ln(25);
+$pdf->SetFont('Arial','B',12);
+$pdf->Cell(60,60,utf8_decode('A QUIEN CORRESPONDA:'),10,0,'R');
+$pdf->SetAutoPageBreak(true);
+$pdf->Ln(18);
+$pdf->SetFont('Arial','',13);
+$pdf->SetY(100);
+$html = "<br>       La que suscribe Jefe(a) del Departamento de Desarrollo Academico por medio del presente, hago constar que el (la) C. $alu alumno(a) de nuestro instituto con numero de control $ncA de la carrera $carr asitio a tutorias durante el semestre $per,siendo su tutor el (la) C. Profesor(a) $tut .<br><br><br>
+          Se extiende la presente con la finalidad de que le sea acreditado un credito complementario en base a acuerdo con el Comite Academico. Sin mas por el momento, quedo a sus ordenes para cualquier aclaracion.";
+$pdf->WriteHTML($html);
+$pdf->Ln(15);
+$pdf->SetFont('Arial','b',13);
+$pdf->Cell(110,60,utf8_decode('ATENTAMENTE'),10,0,'R');
+$pdf->Ln(100);
+$pdf->SetFont('Arial','b',11);
+$html="JEFE DEL DEPARTAMENTO DE                                                       SUBDIRECTOR ACADEMICO      <br>    DESAROLLO ACADEMICO";
+$pdf->WriteHTML($html);
+$pdf->Output('prueba.pdf','D');
+?>

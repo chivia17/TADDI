@@ -126,12 +126,19 @@ $(document).ready(main);
 			 });
 
 			 $('#buCTG').click(function(){            //Boton Generar Constancia Tutor
-				 var ca = $("#selCTC").val()
+				 var ca = $("#selCTC").val();
 				 var ct = $("#selCTT").val();
 				 var cp = $("#selCTP").val();
 				 var cg = $("#selCTG").val();
 				 location.href= "./contents/consTutor.php?tuto="+ ct +"&grup="+ cg +"&per="+cp+"&carr="+ca;
 		 });
+
+
+		 	 $('#genCA').click(function(){            //Boton Generar Constancia Tutor
+		 				 var nc = $("#conNC").val();
+						 location.href= "./contents/consAlum.php?nc="+nc;
+		 		 });
+
 
 
 		 $('#selCTCA').on("change",function()    //Select Carrera Constancia carga tutorias
