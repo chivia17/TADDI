@@ -136,7 +136,14 @@ $(document).ready(main);
 
 		 	 $('#genCA').click(function(){            //Boton Generar Constancia Tutor
 		 				 var nc = $("#conNC").val();
-						 location.href= "./contents/consAlum.php?nc="+nc;
+						 $.post("./contents/comAlum.php", { nc : nc }, function(data){
+			 	    if(data == 0){
+			 	     	alert("El alumno no existe");
+			 	    }
+			 	    else if(data == 1){
+            	location.href= "./contents/consAlum.php?nc="+nc;
+			 	    }
+			 	    });
 		 		 });
 
 
