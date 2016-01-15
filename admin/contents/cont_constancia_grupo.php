@@ -1,3 +1,6 @@
+<?php
+require_once("comboBox_carreras.php");
+?>
 <div class="contenido container">
 	<div class="titulo text-center">
 		<h2><b>CONSTANCIA GRUPO</b></h2>
@@ -8,27 +11,21 @@
 				  <div class="form-group">
 				    <label for="seleccar" class="col-md-2 control-label">Carrera</label>
 				    <div class="col-md-6">
-  							<select required name="programa" class="form-control">    
-   					    		<option value="">CARRERA</option>
-  							</select>
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label for="sel" class="col-md-2 control-label">Periodo</label>
-				    <div class="col-md-6">
-  							<select required name="periodo" class="form-control">
-  								<option value="">PERIODO</option>    
-   					    		<option value="e_j">Enero-Junio</option>
-     				    		<option value="a_d">Agosto-Diciembre</option>
-       							<option value="v">Verano</option>
+  							<select required name="programa" class="form-control" id="prog">
+										<?php
+		                   $carreras=getCarreras();
+											   echo "<option value=''>--Selecciona Carrera</option>";
+		                       foreach ($carreras as $indice => $registro) {
+		                          echo "<option value='".$registro["cveCarrera"]."'>".$registro["NombreCarrera"]."</option>";
+		                        }
+		                ?>
   							</select>
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label for="sel" class="col-md-2 control-label">Grupo</label>
 				    <div class="col-md-6">
-  							<select required name="periodo" class="form-control">    
-   					    		<option value="">GRUPO</option>
+  							<select required name="periodo" class="form-control" id="grup">
   							</select>
 				    </div>
 				  </div>
