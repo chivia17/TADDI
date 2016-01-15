@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 	<?php include "./includes/head.html"; ?>
@@ -8,7 +11,7 @@
 		</div>
 		<?php include "./includes/nav.html"; ?>
 		<div class="wrapper">
-			<?php include "../admin/contents/cont_constancia_alumno.php"; ?>
+			<?php include "./contents/cont_constancia_alumno.php"; ?>
 		</div>
 		<?php include "./modals/modalPsw.php"; ?>
 		<?php include "./includes/footer.html"; ?>

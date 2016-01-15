@@ -31,9 +31,18 @@ $(document).ready(main);
       location.href= "../contents/logout.php";
     });
 
-    $('#selTP').on("change",function()    //Select Periodo Constancia Carreras
-    {
-     });
+    $('#genCAC').click(function(){            //Boton Generar Constancia Alumno
+          var nc = $("#conNC").val();
+          var id_ca = $("#cvec").val();
+          $.post("./contents/comAlum.php", { nc : nc, id_ca : id_ca }, function(data){
+             if(data == 0){
+                  alert("El alumno no existe");
+                }
+             else if(data == 1){
+                  location.href= "./contents/consAlum.php?nc="+nc;
+                }
+              });
+      });
 
 
    }

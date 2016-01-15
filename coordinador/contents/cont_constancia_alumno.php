@@ -1,3 +1,6 @@
+<?php
+$cve = $_SESSION["cveCar"];
+ ?>
 <div class="contenido container">
 	<div class="titulo text-center">
 		<h2><b>CONSTANCIA ALUMNO</b></h2>
@@ -13,8 +16,9 @@
 			</div>
 		<div class="form-group">
 				<div class="col-lg-offset-2 col-lg-10">
-				    <button type="submit" class="btn btn-default" id="genCA">Generar</button>
+				    <button type="button" class="btn btn-default" id="genCAC" >Generar</button>
 				</div>
+				  <input type="hidden" id="cvec" value="<?=$_SESSION['cveCar'];?>"></input>
 			</div>
 		</form>
 	</div>
