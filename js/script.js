@@ -124,7 +124,7 @@ function validar_rfc(rf) {
 		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{1}[0-9]{6}-([A-Z]|[0-9]){3})$/;
 		var validRfc=new RegExp(valid);
 		var matchArray=rfc.match(validRfc);
-		if (matchArray==null) {
+		if (matchArray==null){
 			return false;
 		}
 		else
@@ -132,9 +132,35 @@ function validar_rfc(rf) {
 			return true;
 		}
 	}
-	else
+	else if(rfc.length==12)
 	{
+		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{1}[0-9]{6}([A-Z]|[0-9]){3})$/;
+		var validRfc=new RegExp(valid);
+		var matchArray=rfc.match(validRfc);
+		if (matchArray==null){
 			return false;
+		}
+		else
+		{
+			return true;
+		}		
+	}
+
+	else if(rfc.length==9){
+		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{1}[0-9]{6}$/;
+		var validRfc=new RegExp(valid);
+		var matchArray=rfc.match(validRfc);
+		if (matchArray==null){
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+
+	else{
+		return false;
 	}
 }
 
