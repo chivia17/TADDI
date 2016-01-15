@@ -7,7 +7,7 @@ $cve=$_SESSION["cveCar"];
 	</div>
 	<div class="container">
 		<br>
-		<form class="form-horizontal" role="form" method="post" action="">
+		<form class="form-horizontal" role="form" method="post" action="" onsubmit="return validar_nc('nc');" required>
 			<div class="form-group">
 				<label for="clave" class="col-md-2 control-label">Numero de Control</label>
 				<div class="col-md-2">

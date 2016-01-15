@@ -223,3 +223,15 @@ function validar_correo(cor) {
 			return true;
 		}
 }
+
+function validar_nc(nc){
+	control=document.getElementById(nc).value;
+	var token=/^[0-9]{8}$/;
+	if(!control.search(token)){
+		return true;
+	}
+	else{
+		document.getElementById("errors_baja").innerHTML = "<p class='text-center text-danger'>¡Número de control Incorrecto Compa!</p>";
+		return false;
+	}
+}
