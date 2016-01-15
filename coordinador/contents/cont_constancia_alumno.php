@@ -8,12 +8,12 @@
 			<div class="form-group">
 				<label for="clave" class="col-md-2 control-label">Numero de Control</label>
 				<div class="col-md-2">
-				    <input type="text" class="form-control" id="nc" name="nc" placeholder="NC">
+				    <input type="text" class="form-control" id="conNC" name="nc" placeholder="NC">
 				</div>
 			</div>
 		<div class="form-group">
 				<div class="col-lg-offset-2 col-lg-10">
-				    <button type="submit" class="btn btn-default">Generar</button>
+				    <button type="submit" class="btn btn-default" id="genCA">Generar</button>
 				</div>
 			</div>
 		</form>

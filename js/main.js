@@ -134,7 +134,7 @@ $(document).ready(main);
 		 });
 
 
-		 	 $('#genCA').click(function(){            //Boton Generar Constancia Tutor
+		 	 $('#genCA').click(function(){            //Boton Generar Constancia Alumno
 		 				 var nc = $("#conNC").val();
 						 $.post("./contents/comAlum.php", { nc : nc }, function(data){
 			 	    if(data == 0){
