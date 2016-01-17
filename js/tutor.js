@@ -75,7 +75,8 @@ $(document).ready(main);
 
      });    
 
-     $('#baja').click(function(){            //Baja logica Alumno        
+     $('#baja').click(function(){            //Baja logica Alumno    
+     alert('Hola, soy bajas');    
         var nc= $('#noControl').val();
         var parametros = {"nc" : nc};
         $.ajax({

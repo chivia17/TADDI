@@ -100,7 +100,7 @@ function validar_alta_gru(n,h){
 function validar_baja_alm(nu){
 	document.getElementById("errors_baja").innerHTML = "";
 	val = document.getElementById(nu).value;
-
+	alert('Hola, soy validar_baja');
 	if(val.length == 8){
 		if(validar_num(val)){
 			return true;
@@ -225,12 +225,14 @@ function validar_correo(cor) {
 }
 
 function validar_nc(nc){
-	control=document.getElementById(nc).value;
+	var control=document.getElementById(nc).value;	
 	var token=/^[0-9]{8}$/;
 	if(!control.search(token)){
+		alert('El numero de control está bien');
 		return true;
 	}
 	else{
+		alert('Error al validar el numero de control');
 		document.getElementById("errors_baja").innerHTML = "<p class='text-center text-danger'>¡Número de control Incorrecto Compa!</p>";
 		return false;
 	}
