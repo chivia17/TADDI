@@ -11,7 +11,7 @@ session_start();
 		</div>
 		<?php include "./includes/nav.html"; ?>
 		<div class="wrapper">
-			<?php include "./contents/cont_baja_alumno.php"; ?>
+			<?php include "../admin/contents/cont_baja_alumno.php"; ?>
 		</div>
 		<?php include "./modals/modalPsw.php"; ?>
 		<?php include "./includes/footer.html"; ?>

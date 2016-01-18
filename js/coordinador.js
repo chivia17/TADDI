@@ -44,5 +44,7 @@ $(document).ready(main);
               });
       });
 
-
+    $('#baja').click(function(){            //Baja logica Alumno
+     alert('Hola, soy baja2');            
+     });
    }

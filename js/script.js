@@ -100,7 +100,6 @@ function validar_alta_gru(n,h){
 function validar_baja_alm(nu){
 	document.getElementById("errors_baja").innerHTML = "";
 	val = document.getElementById(nu).value;
-	alert('Hola, soy validar_baja');
 	if(val.length == 8){
 		if(validar_num(val)){
 			return true;

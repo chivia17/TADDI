@@ -92,6 +92,7 @@ $(document).ready(main);
        }
      });
      });
+     
 
      $('#cam').click(function(){        //Buscar alumno Alta logica Alumno
        var cv= $('#rfc').val();
