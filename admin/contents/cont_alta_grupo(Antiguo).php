@@ -9,29 +9,10 @@ require_once("comboBox_carreras.php");
 				<form class="form-horizontal" role="form" method="post" action="../admin/contents/cont_alta_grupo_llenar.php"
 				onsubmit="return validar_alta_gru('nomgru','horagru');">
 				  <div class="form-group">
-				    <label for="idgru" class="col-md-2 control-label">Año</label>
+				    <label for="idgru" class="col-md-2 control-label">Id Grupo</label>
 				    <div class="col-md-6">
-				      <select required name="anio" class="form-control">
-				      		<option value="2016" name="">2016</option>
-				      		<option value="2015">2015</option>
-				      		<option value="2014">2014</option>
-				      		<option value="2013">2013</option>
-				      		<option value="2012">2012</option>
-				      		<option value="2011">2011</option>	
-				      </select>					      		
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label for="idgru" class="col-md-2 control-label">ID Grupo</label>
-				    <div class="col-md-6">
-				      <select required name="anio" class="form-control">
-				      		<option value="2016" name="">A</option>
-				      		<option value="2015">B</option>
-				      		<option value="2014">C</option>
-				      		<option value="2013">D</option>
-				      		<option value="2012">E</option>
-				      		<option value="2011">F</option>	
-				      </select>					      		
+				      <input style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();"
+				      type="text" class="form-control" id="idgru" name="idgru" placeholder="id" required>
 				    </div>
 				  </div>
 				  <div class="form-group">
