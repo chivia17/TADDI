@@ -146,6 +146,9 @@ $(document).ready(main);
 			 	    });
 		 		 });
 
+				 $('#btnBET').click(function(){            //Boton Ver Evaluacion Tutor
+           alert("entro");
+			 });
 
 
 		 $('#selCTCA').on("change",function()    //Select Carrera Constancia carga tutorias
