@@ -5,17 +5,17 @@
 <div class="contenido container">
 	<div class="titulo text-center">
 		<h2><b>ESTADISTICAS</b></h2>
-	</div> 
+	</div>
 	<!--
 	<div class="container">
 		<br>
 		<form class="form-horizontal" role="form" method="post" action="">
-				 
+
 				  <div class="form-group">
 				    <label for="sele" class="col-md-2 control-label">Carrera</label>
 				    <div class="col-md-6">
 				       <select required name="idTutores" class="form-control">
-				       		<option value="" name="a">-Selecciona una Carrera-</option>	
+				       		<option value="" name="a">-Selecciona una Carrera-</option>
 				       		<?php
         							$carreras=getCarreras();
         							foreach ($carreras as $indice => $registro) {
@@ -30,7 +30,7 @@
 				    <div class="col-md-offset-2 col-md-3">
 				      <button type="submit" class="btn btn-default" id="con1204" name="buscar">Consultar</button>
 				    </div>
-				  </div>				  
+				  </div>
 			</form>
 	</div>
 	 -->
@@ -50,7 +50,7 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 		$sql=mysql_query("SELECT count(*) FROM alumnos");
 			while($row=mysql_fetch_array($sql)){
 				$y=(int)$row['count(*)'];
-			}	
+			}
 
 ?>
 <script type="text/javascript">

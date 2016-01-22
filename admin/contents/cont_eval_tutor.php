@@ -37,6 +37,6 @@ require_once("comboBox_carreras.php");
 			</div>
 		</form>
 		<br><br>
-			<div id="grafica"></div>
+     <div class="resultados"><canvas id="grafico"></canvas></div>
 	</div>
 </div>
