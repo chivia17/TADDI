@@ -24,13 +24,13 @@ require_once("comboBox_carreras.php");
 				  <div class="form-group">
 				    <label for="idgru" class="col-md-2 control-label">ID Grupo</label>
 				    <div class="col-md-6">
-				      <select required name="anio" class="form-control">
-				      		<option value="2016" name="">A</option>
-				      		<option value="2015">B</option>
-				      		<option value="2014">C</option>
-				      		<option value="2013">D</option>
-				      		<option value="2012">E</option>
-				      		<option value="2011">F</option>	
+				      <select required name="idgru" class="form-control">
+				      		<option value="A" name="">A</option>
+				      		<option value="B">B</option>
+				      		<option value="C">C</option>
+				      		<option value="D">D</option>
+				      		<option value="E">E</option>
+				      		<option value="F">F</option>
 				      </select>					      		
 				    </div>
 				  </div>
@@ -62,7 +62,7 @@ require_once("comboBox_carreras.php");
    					    		<?php
         							$carreras=getCarreras();
         							foreach ($carreras as $indice => $registro) {
-        								echo "<option name='".$registro["cveCarrera"]."'>".$registro["cveCarrera"]."</option>";
+        								echo "<option value='".$registro["cveCarrera"]."'>".$registro["cveCarrera"]."</option>";
         							}
             			        ?>
   							</select>
@@ -87,13 +87,9 @@ require_once("comboBox_carreras.php");
 				    <label for="sel" class="col-md-2 control-label">Periodo</label>
 				    <div class="col-md-6">
 				    <select required name="idPeriodo" class="form-control">
-   					    		<option value="" name="">-Seleccione un Periodo-</option>
-   					    		<?php
-        							$carreras=getPeriodos();
-        							foreach ($carreras as $indice => $registro) {
-        								echo "<option value='".$registro["idPeriodo"]."'>".$registro["periodo"]."</option>";
-        							}
-            			        ?>
+   					    		<option value="1">Enero-Junio</option>
+   					    		<option value="2">Agosto-Diciembre</option>
+   					    		<option value"3">Verano</option>
   							</select>
 				    </div>
 				  </div>
