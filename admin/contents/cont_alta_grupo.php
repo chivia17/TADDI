@@ -57,7 +57,7 @@ require_once("comboBox_carreras.php");
 				  <div class="form-group">
 				    <label for="seleccar" class="col-md-2 control-label">Carrera</label>
 				    <div class="col-md-6">
-  							<select required name="cveCarrera" class="form-control">    
+  							<select required name="cveCarrera" class="form-control" id="selCTC">    
    					    		<option value="" name="">-Seleccione una carrera-</option>
    					    		<?php
         							$carreras=getCarreras();
@@ -71,14 +71,7 @@ require_once("comboBox_carreras.php");
 				  <div class="form-group">
 				    <label for="sele" class="col-md-2 control-label">Tutor</label>
 				    <div class="col-md-6">
-				      <select required name="idTutores" class="form-control">    
-   					    		<option value="" name="">-Seleccione un Tutor-</option>
-   					    		<?php
-        							$carreras=getTutores();
-        							foreach ($carreras as $indice => $registro) {
-        								echo "<option value='".$registro["idTutores"]."'>".$registro["nombreTutor"]."</option>";
-        							}
-            			        ?>
+				      <select required name="idTutores" class="form-control" id="selCTT"> 
   							</select>
 				    </div>
 				  </div>
