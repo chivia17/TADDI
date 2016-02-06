@@ -58,18 +58,21 @@
 						<th>Área canalizada</th>
 						<th>Observaciones</th>
 					</tr>";
-	$cont=1;
+	$cont=0;
     if ($result->num_rows > 0) {
     	
  	   while($row = $result->fetch_assoc())
  	   {
- 	   	echo "<tr><td>".$cont."</td><td width=\"20%\"><font face=\"verdana\">" .
-		 $row["idAlumnos"] . "</font></td><td width=\"20%\"><font  face=\"verdana\">" .
-		 $row["nombre"] . "</font></td><td contenteditable=true></td>
-		 <td contenteditable=true></td><td contenteditable=true></td><td width=\"20%\"><font  face=\"verdana\">" .
+ 	   	$cont=$cont+1;
+ 	   	$heyy=$cont-1;
+ 	   	echo "<tr><td>".$cont."</td><td width=\"20%\" ><font face=\"verdana\"><input type=text  name=numControl".$heyy." readonly value=".$row["idAlumnos"]." />".
+		 "</font></td><td width=\"20%\"><font  face=\"verdana\">" .
+		 $row["nombre"] . "</font></td><td><input type=text size=4 name=vara".$heyy."></td>
+		 <td> <input type=text size=4 name=varb".$heyy."></td><td> <input type=text size=8 name=varc".$heyy."></td><td width=\"20%\"><font  face=\"verdana\">" .
 		 $row["observaciones"] . "</font></td></tr>";
-		 $cont=$cont+1;
+		 
 		}
+		echo"<tr><td id=he name=he style='visibility:hidden'><input type=text  name=contador value=".$cont." /></td></tr>";
     }
 		else {
 			echo '<script>alert("Alumno no encontrado")</script>';

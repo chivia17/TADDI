@@ -10,7 +10,7 @@ $cve = $_SESSION["rfc"];
 </div>
 
 <br><br>		
-<form role="form" method="post" action="">
+<form role="form" method="post" action="./contents/insertar_reporte_semestral.php">
 	<div class="row">
 		<div class="form-horizontal">
   			<div class="form-group">
