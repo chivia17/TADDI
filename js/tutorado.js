@@ -41,13 +41,20 @@ function main(){
       pas = $('#pass').val();
       par = $('#pasr').val();
       coE = $('#corr').val();
+      if(ncA!="" && aP!="" && aM!="" && pas!="" && par!="" && iG!=""){
+        if(pas==par){
       $.post("./contents/regisAlum.php", {nomA : nomA, aP : aP, aM : aM,
                                            iG : iG, ncA : ncA, pas : pas,
                                            coE : coE},
                  function(data){
                                 alert(data);
-                              });
-    });
+                              });   
+        }
+        else{
+          alert("Las contraseñas no coinciden");
+        }
+      }
+    });    
 
     $('#grdEvaluacion').click(function(){     //Boton Guarda Evaluacion Tutor
       p1 = $('input:radio[name=eva01]:checked').val();
