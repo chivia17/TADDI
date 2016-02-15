@@ -6,7 +6,7 @@ class MySQL
   public function MySQL()
   {
     if(!isset($this->conexion)){
-      $this->conexion = (mysql_connect("localhost","root",""))
+      $this->conexion = (mysql_connect("localhost","mzulma","Zulma16$"))
      //$this->conexion = (mysql_connect("localhost","root",""))
         or die(mysql_error());
       mysql_select_db("mydb",$this->conexion) or die(mysql_error());
