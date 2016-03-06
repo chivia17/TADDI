@@ -2,7 +2,7 @@
 function conectar(){
 		try{
         	$servidor = "localhost";
-        	$basedatos = "mydb";
+        	$basedatos = "taddi2";
         	$usuario = "mzulma";
         	$contrasena = "mZulma16$";
 

@@ -9,7 +9,7 @@ class MySQL
       $this->conexion = (mysql_connect("localhost","mzulma","mZulma16$"))
      //$this->conexion = (mysql_connect("localhost","root",""))
         or die(mysql_error());
-      mysql_select_db("mydb",$this->conexion) or die(mysql_error());
+      mysql_select_db("taddi2",$this->conexion) or die(mysql_error());
      //mysql_select_db("tadii",$this->conexion) or die(mysql_error());
     }
   }
