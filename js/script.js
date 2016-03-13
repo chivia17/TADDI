@@ -117,7 +117,7 @@ function validar_baja_alm(nu){
 
 function validar_rfc(rf) {
 	rfc = rf;
-	if (rfc.length == 13)
+	if (rfc.length == 14)
 	{
 		//var valid = '^(([A-Z]|[a-z]|\s){1})(([A-Z]|[a-z]){3})([0-9]{6})((([A-Z]|[a-z]|[0-9]){3}))';
 		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{2}[0-9]{6}-([A-Z]|[0-9]){3})$/;
@@ -131,7 +131,7 @@ function validar_rfc(rf) {
 			return true;
 		}
 	}
-	else if(rfc.length==12)
+	else if(rfc.length==13)
 	{
 		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{2}[0-9]{6}([A-Z]|[0-9]){3})$/;
 		var validRfc=new RegExp(valid);
