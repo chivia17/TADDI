@@ -19,7 +19,7 @@ function conectar2(){//No debe ser variable de conexion mysqli
 	}
 	function getCarreras(){
 		$resp=false;
-		$consulta="Select * from Carreras";
+		$consulta="Select * from carreras";
 
 		$conexion=conectar2();
 		$sentencia=$conexion->prepare($consulta);
