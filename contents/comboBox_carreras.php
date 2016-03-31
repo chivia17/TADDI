@@ -2,9 +2,9 @@
 function conectar2(){//No debe ser variable de conexion mysqli
 		try{
         	$servidor = "localhost";
-        	$basedatos = "taddi2";
-        	$usuario = "mzulma";
-        	$contrasena = "mZulma16$";
+        	$basedatos = "mydb";
+        	$usuario = "root";
+        	$contrasena = "";
 
 	        $conexion = new PDO("mysql:host=$servidor;dbname=$basedatos",
                             $usuario,

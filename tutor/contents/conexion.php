@@ -2,9 +2,9 @@
 function conectar(){
 		try{
         	$servidor = "localhost";
-        	$basedatos = "taddi2";
-        	$usuario = "mzulma";
-        	$contrasena = "mZulma16$";
+        	$basedatos = "mydb";
+        	$usuario = "root";
+        	$contrasena = "";
 
 	        $conexion = mysqli_connect("$servidor","$usuario","$contrasena","$basedatos");
         	return $conexion;
