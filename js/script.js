@@ -2,9 +2,9 @@ function validar_changePsw(){
 	document.getElementById("errors_changePsw").innerHTML = "";
 	pswNew = document.getElementById("pswNew").value;
 	pswChk = document.getElementById("pswChk").value;
-	
-	
-	if(pswNew.length < 6){ 
+
+
+	if(pswNew.length < 6){
 			document.getElementById("errors_changePsw").innerHTML = "<p class='text-center text-danger'>¡La contraseña debe contener al menos 6 caracteres!</p>";
 		return false;
 	}
@@ -17,12 +17,12 @@ function validar_changePsw(){
 
 function validar_alta_carr(le,Le2){
 	document.getElementById("errors_carr").innerHTML = "";
-	val2 = document.getElementById(le).value;	
+	val2 = document.getElementById(le).value;
 	val3=document.getElementById(Le2).value;
-		if (validar_cve(val2)){			
+		if (validar_cve(val2)){
 			if(validar_let(val3)){
 				return true;
-			}			
+			}
 
 			else {
 				document.getElementById("errors_carr").innerHTML = "<p class='text-center text-danger'>¡Formato de nombre Incorrecto!</p>";
@@ -117,10 +117,10 @@ function validar_baja_alm(nu){
 
 function validar_rfc(rf) {
 	rfc = rf;
-	if (rfc.length == 13)
+	if (rfc.length == 14)
 	{
 		//var valid = '^(([A-Z]|[a-z]|\s){1})(([A-Z]|[a-z]){3})([0-9]{6})((([A-Z]|[a-z]|[0-9]){3}))';
-		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{1}[0-9]{6}-([A-Z]|[0-9]){3})$/;
+		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{2}[0-9]{6}-([A-Z]|[0-9]){3})$/;
 		var validRfc=new RegExp(valid);
 		var matchArray=rfc.match(validRfc);
 		if (matchArray==null){
@@ -131,9 +131,9 @@ function validar_rfc(rf) {
 			return true;
 		}
 	}
-	else if(rfc.length==12)
+	else if(rfc.length==13)
 	{
-		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{1}[0-9]{6}([A-Z]|[0-9]){3})$/;
+		var valid = /^([A-Z]{1}[A|E|I|O|U][A-Z]{2}[0-9]{6}([A-Z]|[0-9]){3})$/;
 		var validRfc=new RegExp(valid);
 		var matchArray=rfc.match(validRfc);
 		if (matchArray==null){
@@ -142,7 +142,7 @@ function validar_rfc(rf) {
 		else
 		{
 			return true;
-		}		
+		}
 	}
 
 	else if(rfc.length==9){
@@ -200,7 +200,7 @@ function validar_let(let){
 
 function validar_cve(let){
 	valor = let;
-	var patron = /^[A-Z]{4}-[0-9]{4}-[0-9]{3}$/;
+	var patron = /^[A-Z]{4}$/;
     if(!valor.search(patron)) {
 	  return true;
 	}
@@ -224,7 +224,7 @@ function validar_correo(cor) {
 }
 
 function validar_nc(nc){
-	var control=document.getElementById(nc).value;	
+	var control=document.getElementById(nc).value;
 	var token=/^[0-9]{8}$/;
 	if(!control.search(token)){
 		alert('El numero de control está bien');

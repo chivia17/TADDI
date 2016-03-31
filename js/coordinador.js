@@ -4,7 +4,9 @@ $(document).ready(main);
    {
     var us=$("#userc").val();
     var pas=$("#passc").val();
-    $.post("./contents/sesion_coor.php", { us : us , pas : pas }, function(data)
+    var cve=$("#selCIC").val();
+    $.post("./contents/sesion_coor.php", { us : us , pas : pas, cve : cve },
+    function(data)
     {
 
     if(data == 0){
@@ -44,7 +46,11 @@ $(document).ready(main);
               });
       });
 
-    $('#baja').click(function(){            //Baja logica Alumno
-     alert('Hola, soy baja2');            
-     });
+      $('#selCIC').on("mouseover",function()    //Select carrera inicio sesion coordinador
+       {
+  	      var id_co = $("#userc").val();
+  	      $.post("./contents/getCarrCoo.php", { id_co: id_co }, function(data){
+  			   $("#selCIC").html(data);
+  	      });
+       });
    }

@@ -81,8 +81,8 @@ require_once("comboBox_carreras.php");
 				    <div class="col-md-6">
 				    <select required name="idPeriodo" class="form-control">
    					    		<option value="1">Enero-Junio</option>
-   					    		<option value="2">Agosto-Diciembre</option>
-   					    		<option value"3">Verano</option>
+   					    		<option value="3">Agosto-Diciembre</option>
+   					    		<option value="2">Verano</option>
   							</select>
 				    </div>
 				  </div>

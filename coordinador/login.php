@@ -37,6 +37,8 @@ else{
 					<form method="POST" action="return false" onsubmit="return false">
 						<input class="form-control" id="userc" type="text" placeholder="Usuario">
 						<input class="form-control" id="passc" type="password"  placeholder="Contraseña">
+						<select required name="carr" id="selCIC" class="form-control">
+						</select>
 						<br>
 						<input class="btn btn-block" id="sesion-coor" type="submit" value="Iniciar sesión">
 					</form>

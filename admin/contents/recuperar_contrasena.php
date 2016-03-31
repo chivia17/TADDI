@@ -6,7 +6,7 @@ $usuario = $_POST["recpassrfc"];
 
 $conexion = new MySQL();
 $query = $conexion->consulta("SET NAMES 'utf8'");
-$query = $conexion->consulta("SELECT rfc, contraseña, correo FROM administrador WHERE rfc = '".$usuario."'");
+$query = $conexion->consulta("SELECT rfc, contrasena, correo FROM coordinadores WHERE rfc = '".$usuario."'");
 $resultado = mysql_fetch_array($query);
 
 if($usuario == $resultado ["rfc"])

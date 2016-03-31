@@ -4,7 +4,9 @@ include'../contents/conexion.php';
 $conexion = conectar();
 $user =$_POST["us"];
 $pass =$_POST["pas"];
-  if($result = $conexion->query("SELECT rfc, cveCarrera  FROM coordinadores WHERE rfc='$user' AND contrasena='$pass'"));
+$cvec =$_POST["cve"];
+  if($result = $conexion->query("SELECT rfc, cveCarrera  FROM coordinadores
+    WHERE rfc='$user' AND contrasena='$pass' AND cveCarrera='$cvec'"));
 {
   if( $result->num_rows > 0)
   {

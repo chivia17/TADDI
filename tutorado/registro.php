@@ -1,5 +1,5 @@
 <?php
-require_once("../contents/comboBox_carreras.php");
+require_once("./contents/comboBox_carreras.php");
 ?>
 <!DOCTYPE html>
 <html>

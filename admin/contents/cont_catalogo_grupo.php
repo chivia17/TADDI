@@ -10,9 +10,9 @@
 	  				<div class="panel-heading">Grupos</div>
 	 					<table class="table">
 	 						<tr>
- 								<td><strong>Grupo</strong></td>
-  							<td><strong>Periodo</strong></td>
- 								<td><strong>Año</strong></td>
+ 								<td><strong>ID Grupo</strong></td>
+  							<td><strong>Nombre</strong></td>
+ 								<td><strong>Periodo</strong></td>
 								<td><strong>Carrera</strong></td>
                 <td><strong>Tutor</strong></td>
 							</tr>
@@ -24,11 +24,11 @@
 							while($row = mysqli_fetch_array($result))
 							{
 							 echo "<tr><td width=\"20%\"><font face=\"verdana\">" .
+							 $row["idGrupos"] . "</font></td>";
+							 echo "<td width=\"20%\"><font face=\"verdana\">" .
 							 $row["NombreGrupo"] . "</font></td>";
 							 echo "<td width=\"20%\"><font face=\"verdana\">" .
-							 $row["per"] . "</font></td>";
-							 echo "<td width=\"20%\"><font face=\"verdana\">" .
-							 $row["ano"] . "</font></td>";
+							 $row["periodo"] . "</font></td>";
 							 echo "<td width=\"20%\"><font face=\"verdana\">" .
 							 $row["NombreCarrera"] . "</font></td>";
 							 echo "<td width=\"25%\"><font face=\"verdana\">" .
