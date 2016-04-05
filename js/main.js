@@ -191,4 +191,14 @@ $(document).ready(main);
 			 });
 			});
 
+		 $('#selCar').on("change",function()    //Select grupos registrar alumno
+     	{
+	    $("#selCar option:selected").each(function () {
+	      id_ca = $(this).val();
+	      $.post("./contents/grupos.php", { id_ca: id_ca }, function(data){
+			   $("#selGru").html(data);
+	      });
+        });
+     });
+
 }
