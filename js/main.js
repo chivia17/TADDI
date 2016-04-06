@@ -195,7 +195,6 @@ $(document).ready(main);
      	{
 	    $("#selCar option:selected").each(function () {
 	      var id_ca = $(this).val();
-				alert($(this).val());
 	      $.post("./contents/grupos.php", { id_ca: id_ca }, function(data){
 			   $("#selGru").html(data);
 	      });
