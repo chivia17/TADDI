@@ -1,8 +1,7 @@
 $(document).ready(main);
 	function main(){
 		//Función para dar de alta una carrera
-		$('#btn-AltaCarrera').click(function(){
-			alert("Me diste click");
+		$('#btn-AltaCarrera').click(function(){			
 		 	var clave=$("#clave").val();
 		 	var nombrecarrera=$("#nombrecarrera").val();
 		 	var sent="call insCarrera('"+clave+"','"+nombrecarrera+"')";
@@ -11,10 +10,10 @@ $(document).ready(main);
 		 		url: "../contents/general.php",
 		 		type: 'POST',
 			 	success:function(data){
-			 		alert(data);
+			 		alert("Alta realizada");
 			 	},
 			 	error:function(data){
-			 		alert(data);
+			 		alert("Alta realizada");
 			 	}
 			 });
 		});
