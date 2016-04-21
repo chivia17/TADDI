@@ -1,6 +1,6 @@
 $(document).ready(main);
 	function main(){
-		//Función para dar de alta una carrera
+		//Función para dar de alta una carrera, se inicia al dar click en el botón de agregar
 		$('#btn-AltaCarrera').click(function(){			
 		 	var clave=$("#clave").val();
 		 	var nombrecarrera=$("#nombrecarrera").val();
@@ -9,12 +9,9 @@ $(document).ready(main);
 		 		data: {sent:sent},
 		 		url: "../contents/general.php",
 		 		type: 'POST',
-			 	success:function(data){
-			 		alert("Alta realizada");
-			 	},
-			 	error:function(data){
-			 		alert("Error al dar de alta");
-			 	}
+		 		dataType:'text'			 
+			 }).always(function(data){
+				alert(data);
 			 });
 		});
 
