@@ -13,7 +13,7 @@ $(document).ready(main);
 			 		alert("Alta realizada");
 			 	},
 			 	error:function(data){
-			 		alert("Alta realizada");
+			 		alert("Error al dar de alta");
 			 	}
 			 });
 		});
