@@ -1,6 +1,6 @@
 $(document).ready(main);
 	function main(){
-
+		//Función para dar de alta una carrera
 		$('#btn-AltaCarrera').click(function(){
 			alert("Me diste click");
 		 	var clave=$("#clave").val();
