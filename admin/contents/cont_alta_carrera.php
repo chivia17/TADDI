@@ -4,7 +4,7 @@
 			</div>
 			<div class="container">
 				<br>
-				<form class="form-horizontal" role="form" method="post" action="./contents/cont_alta_carrera_llenar.php" onsubmit="return validar_alta_carr('clave','nombrecarrera')">
+				<form class="form-horizontal" role="form" method="" action="" onsubmit="return validar_alta_carr('clave','nombrecarrera')">
 				  <div class="form-group">
 				    <label for="clave" class="col-md-2 control-label">Clave Carrera</label>
 				    <div class="col-md-2">
@@ -26,7 +26,7 @@
 		  		</div>
 				  <div class="form-group">
 				    <div class="col-lg-offset-2 col-lg-10">
-				      <button type="submit" class="btn btn-default">Agregar</button>
+				      <button type="submit" class="btn btn-default" id="btn-AltaCarrera" name ="btn-AltaCarrera">Agregar</button>
 				    </div>
 				  </div>
 				</form>

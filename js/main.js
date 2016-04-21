@@ -1,6 +1,24 @@
 $(document).ready(main);
 	function main(){
 
+		$('#btn-AltaCarrera').click(function(){
+			alert("Me diste click");
+		 	var clave=$("#clave").val();
+		 	var nombrecarrera=$("#nombrecarrera").val();
+		 	var sent="call insCarrera('"+clave+"','"+nombrecarrera+"')";
+		 	$.ajax({
+		 		data: {sent:sent},
+		 		url: "../contents/general.php",
+		 		type: 'POST',
+			 	success:function(data){
+			 		alert(data);
+			 	},
+			 	error:function(data){
+			 		alert(data);
+			 	}
+			 });
+		});
+
 		$('#camb').click(function(){      //Cambio carrera
 			var gru= $("#grup").val();
 			var nc=  $("#nc").val();
