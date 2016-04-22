@@ -1,6 +1,27 @@
 $(document).ready(main);
 	function main(){
-		//Función para dar de alta una carrera, se inicia al dar click en el botón de agregar
+		//Función para dar de alta un coordinador, se inicia al dar click en el botón agregar que se encuentra en Alta Coordinador
+		$('#btn-AltaCoord').click(function(){
+			var rfc=$("#rfcc").val();			
+			var nomcor=$("#nomcor").val();			
+			var apepacor=$("#apepacor").val();			
+			var apemacor=$("#apemacor").val();			
+			var passcor=$("#passcor").val();			
+			var correoc=$("#correoc").val();
+			var cc=document.getElementById('cveCarrera').value;
+			var sent="call insCoordinador('"+rfc+"','"+nomcor+"','"+apepacor+"','"+apemacor+"','"+passcor+"','"+cc+"','"+correoc+"')";
+			$.ajax({
+				data: {sent:sent},
+		 		url: "../contents/general.php",
+		 		type: 'POST',
+		 		dataType:'text'			 
+			 }).always(function(data){
+				alert(data);
+			});
+			
+		});
+
+		//Función para dar de alta una carrera, se inicia al dar click en el botón de agregar que se encuentra en Alta Carrera
 		$('#btn-AltaCarrera').click(function(){			
 		 	var clave=$("#clave").val();
 		 	var nombrecarrera=$("#nombrecarrera").val();
