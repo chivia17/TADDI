@@ -1,4 +1,8 @@
 <?php
+/*
+	Archivo para ejecutar una sentencia sql.
+	Por los mensajes que regresa se recomienda usarla para las altas únicamente.
+*/
 	require_once("conexion.php");
 	$conexion=conectar();
 	$sql=$_POST['sent'];
