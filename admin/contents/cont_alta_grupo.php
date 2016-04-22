@@ -1,17 +1,20 @@
 <?php
 require_once("comboBox_carreras.php");
 ?>
+<!--
+Muestra el contenido de Alta Grupo
+-->
 <div class="contenido container">
 	<div class="titulo text-center">
 		<h2><b>ALTA GRUPO</b></h2>
 	</div>
 				<br>
-				<form class="form-horizontal" role="form" method="post" action="../admin/contents/cont_alta_grupo_llenar.php"
+				<form class="form-horizontal" role="form" method="" action=""
 				onsubmit="return validar_alta_gru('nomgru','horagru');">
 				  <div class="form-group">
 				    <label for="idgru" class="col-md-2 control-label">Año</label>
 				    <div class="col-md-6">
-				      <select required name="anio" class="form-control">
+				      <select required name="anio" class="form-control" id="anio">
 				      		<option value="2016" name="">2016</option>
 				      		<option value="2015">2015</option>
 				      		<option value="2014">2014</option>
@@ -24,7 +27,7 @@ require_once("comboBox_carreras.php");
 				  <div class="form-group">
 				    <label for="idgru" class="col-md-2 control-label">ID Grupo</label>
 				    <div class="col-md-6">
-				      <select required name="idgru" class="form-control">
+				      <select required name="idgru" class="form-control" id="idgru">
 				      		<option value="A" name="">A</option>
 				      		<option value="B">B</option>
 				      		<option value="C">C</option>
@@ -79,7 +82,7 @@ require_once("comboBox_carreras.php");
 				  <div class="form-group">
 				    <label for="sel" class="col-md-2 control-label">Periodo</label>
 				    <div class="col-md-6">
-				    <select required name="idPeriodo" class="form-control">
+				    <select required name="idPeriodo" class="form-control" id="idPeriodo">
    					    		<option value="1">Enero-Junio</option>
    					    		<option value="3">Agosto-Diciembre</option>
    					    		<option value="2">Verano</option>
@@ -93,7 +96,7 @@ require_once("comboBox_carreras.php");
 		  		</div>
 				  <div class="form-group">
 				    <div class="col-md-offset-2 col-md-3">
-				      <button type="submit" class="btn btn-default">Agregar</button>
+				      <button type="submit" class="btn btn-default" id="btn-AltaGrupo">Agregar</button>
 				    </div>
 				  </div>
 				</form>

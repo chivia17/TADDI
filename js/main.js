@@ -1,5 +1,26 @@
 $(document).ready(main);
 	function main(){
+		//Función para dar de alta un nuevo grupo, se inicia al dar click en el botón agregar que se encuentra en Alta Grupo
+		$("#btn-AltaGrupo").click(function(){
+			var anio=document.getElementById('anio').value;
+			var idgru=document.getElementById('idgru').value;
+			var nomgru=$("#nomgru").val();
+			var salgru=$("#salgru").val();
+			var horagru=$("#horagru").val();
+			var selCTC=document.getElementById('selCTC').value;
+			var selCTT=document.getElementById('selCTT').value;
+			var idPeriodo=document.getElementById('idPeriodo').value;
+			var sent="call insGrupos('"+selCTC+"-"+anio+"-"+idPeriodo+"-"+idgru+"','"+nomgru+"','"+salgru+"','"+horagru+"','"+selCTC+"','"+idPeriodo+"','"+selCTT+"')";
+			$.ajax({
+				data: {sent:sent},
+		 		url: "../contents/general.php",
+		 		type: 'POST',
+		 		dataType:'text'			 
+			 }).always(function(data){
+				alert(data);
+			});	
+		});
+
 		//Función para dar de alta un nuevo tutor, se inicia al dar click en el botón agregar que se encuentra en Alta Tutor
 		$('#btn-AltaTutor').click(function(){			
 			var activo="0";
