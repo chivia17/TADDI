@@ -2,13 +2,16 @@
 require_once("comboBox_carreras.php");
 
 ?>
+<!--
+Muestra el contenido de la ventana 'Alta Tutor'
+-->
 <div id="contenido">
 	<div class="titulo text-center">
 					<h2><b>ALTA TUTOR</b></h2>
 			</div>
 			<div class="container">
 				<br>
-				<form class="form-horizontal" role="form" method="post" action="../admin/contents/cont_alta_tutor_llenar.php" 
+				<form class="form-horizontal" role="form" method="" action="" 
 				onsubmit="return validar_alta_coor('rfct','correocor','nomcor','apepacor','apemacor');">
 				  <div class="form-group">
 				    <label for="rfct" class="col-md-2 control-label">RFC</label>
@@ -55,20 +58,20 @@ require_once("comboBox_carreras.php");
 				  <div class="form-group">
 				    <label for="seleccar" class="col-md-2 control-label">Carrera</label>
 				    <div class="col-md-6">
-  							<select required name="cveCarrera" class="form-control">    
+  							<select required name="cveCarrerat" class="form-control" id="cveCarrerat">    
    					    		<option value="" name="">-Seleccione una carrera-</option>
    					    		<?php
         							$carreras=getCarreras();
         							foreach ($carreras as $indice => $registro) {
-        								echo "<option name='".$registro["cveCarrera"]."'>".$registro["cveCarrera"]."</option>";
+        								echo "<option name='".$registro["cveCarrera"]."' value='".$registro["cveCarrera"]."'>".$registro["cveCarrera"]."</option>";
         							}
             			        ?>
   							</select>
 				  </div>	
 				  <div class="form-group container">
 				  	<center>
-					  	<input type="radio" name="group1" value="si" checked> Activo
-					    <input type="radio" name="group1" value="no"> No Activo
+					  	<input type="radio" name="group1" value="1" id="r1" checked> Activo
+					    <input type="radio" name="group1" value="0" id="r2"> No Activo
 				    </center>
 				  </div>
 				  <div class="row">
@@ -78,7 +81,7 @@ require_once("comboBox_carreras.php");
 		  		</div>
 				  <div class="form-group">
 				    <div class="col-md-offset-2 col-md-3">
-				      <button type="submit" class="btn btn-default">Agregar</button>
+				      <button type="submit" class="btn btn-default" id="btn-AltaTutor">Agregar</button>
 				    </div>
 				  </div>
 				</form>

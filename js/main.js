@@ -1,12 +1,36 @@
 $(document).ready(main);
 	function main(){
+		//Función para dar de alta un nuevo tutor, se inicia al dar click en el botón agregar que se encuentra en Alta Tutor
+		$('#btn-AltaTutor').click(function(){			
+			var activo="0";
+			var rfct=$("#rfct").val();
+			var nomtut=$("#nomcor").val();
+			var apepatut=$("#apepacor").val();
+			var apematut=$("#apemacor").val();
+			var passtut=$("#passcor").val();
+			var correotut=$("#correocor").val();
+			var cc=document.getElementById('cveCarrerat').value;						
+			if (document.getElementById('r1').checked) {
+  				activo = document.getElementById('r1').value;
+			}
+			var sent="call insTutores('"+rfct+"','"+nomtut+"','"+apepatut+"','"+apematut+"','"+passtut+"','"+activo+"','"+cc+"','"+correotut+"')";		
+			$.ajax({
+				data: {sent:sent},
+		 		url: "../contents/general.php",
+		 		type: 'POST',
+		 		dataType:'text'			 
+			 }).always(function(data){
+				alert(data);
+			});		
+		});
+
 		//Función para dar de alta un coordinador, se inicia al dar click en el botón agregar que se encuentra en Alta Coordinador
 		$('#btn-AltaCoord').click(function(){
 			var rfc=$("#rfcc").val();			
 			var nomcor=$("#nomcor").val();			
 			var apepacor=$("#apepacor").val();			
 			var apemacor=$("#apemacor").val();			
-			var passcor=$("#passcor").val();			
+			var passcor=$("#passcor").val();
 			var correoc=$("#correoc").val();
 			var cc=document.getElementById('cveCarrera').value;
 			var sent="call insCoordinador('"+rfc+"','"+nomcor+"','"+apepacor+"','"+apemacor+"','"+passcor+"','"+cc+"','"+correoc+"')";
