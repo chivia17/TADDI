@@ -7,7 +7,7 @@ require_once("comboBox_carreras.php");
 			</div>
 			<div class="container">
 				<br>
-				<form class="form-horizontal" role="form" method="post" action="./contents/cont_alta_coordinador_llenar.php" 
+				<form class="form-horizontal" role="form" method="" action="" 
 				onsubmit="return validar_alta_coor('rfcc','correoc','nomcor','apepacor','apemacor');">
 				  <div class="form-group">
 				    <label for="rfc" class="col-md-2 control-label">RFC</label>
@@ -54,12 +54,12 @@ require_once("comboBox_carreras.php");
 				  <div class="form-group">
 				    <label for="seleccar" class="col-md-2 control-label">Carrera</label>
 				    <div class="col-md-6">
-  							<select required name="cveCarrera" class="form-control">    
+  							<select required name="cveCarrera" class="form-control" id="cveCarrera">    
    					    		<option value="" name="">-Seleccione una carrera-</option>
    					    		<?php
         							$carreras=getCarreras();
         							foreach ($carreras as $indice => $registro) {
-        								echo "<option name='".$registro["cveCarrera"]."'>".$registro["cveCarrera"]."</option>";
+        								echo "<option name='".$registro["cveCarrera"]."' value='".$registro["cveCarrera"]."'>".$registro["cveCarrera"]."</option>";
         							}
             			        ?>
   							</select>
@@ -73,7 +73,7 @@ require_once("comboBox_carreras.php");
 		  		</div>	
 				  <div class="form-group">
 				    <div class="col-lg-offset-2 col-lg-10">
-				      <button type="submit" class="btn btn-default">Agregar</button>
+				      <button type="submit" class="btn btn-default" id="btn-AltaCoord">Agregar</button>
 				    </div>
 				  </div>
 				</form>

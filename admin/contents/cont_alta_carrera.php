@@ -1,3 +1,7 @@
+<!--
+Muestra el contenido de la ventana 'Alta carrera'
+Tiene un botón, un campo para clave y otro para nombre, así como sus respectivas etiquetas
+-->
 <div class="" id="contenido">
 	<div class="titulo text-center">
 					<h2><b>ALTA CARRERA</b></h2>
