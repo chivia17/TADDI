@@ -48,13 +48,13 @@ function main(){
                                            coE : coE},
                  function(data){
                                 alert(data);
-                              });   
+                              });
         }
         else{
           alert("Las contraseñas no coinciden");
         }
       }
-    });    
+    });
 
     $('#grdEvaluacion').click(function(){     //Boton Guarda Evaluacion Tutor
       p1 = $('input:radio[name=eva01]:checked').val();
@@ -232,18 +232,34 @@ function main(){
      p19 = $('#inpEdadPadre').val();
      p20 = $('#selTraPadre').val();
      p21 = $('#inpProPadre').val();
-     alert($('#selSexo').val());
-     $.post("./contents/testEntre.php", {  p1 : p1, p2 : p2, p3 : p3, p4 : p4,
-                                            p5 : p5, p6 : p6, p7 : p7, p8 : p8,
-                                      p9 : p9, p10 : p10, p11 : p11, p12 : p12,
-                                    p13 : p13, p14 : p14, p15 : p15, p16 : p16,
-                                    p17 : p17, p18 : p18, p19 : p19, p20 : p20,
-                                    p21 : p21},
-                              function(data){
-                                              alert(data);
-                                            });
+     var formData = new FormData($(".formulario")[0]);
+      $.ajax({
+        url: './contents/uploadImag.php',
+        type: 'POST',
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(data){
+          if(data == 0){
+            $.post("./contents/testEntre.php", {  p1 : p1, p2 : p2, p3 : p3, p4 : p4,
+                                                    p5 : p5, p6 : p6, p7 : p7, p8 : p8,
+                                              p9 : p9, p10 : p10, p11 : p11, p12 : p12,
+                                            p13 : p13, p14 : p14, p15 : p15, p16 : p16,
+                                            p17 : p17, p18 : p18, p19 : p19, p20 : p20,
+                                            p21 : p21},
+                                      function(data){
+                                                      alert(data);
+                                                    });
+          }
+          else if(data == 1){
+            alert("Ocurrio un error");
+          }
+        }
+        });
 
    });
+
 
 
 }

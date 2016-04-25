@@ -11,15 +11,15 @@
 <div class="panel panel-success">
 <div class="panel-heading">FORMATO DE ENTREVISTA</div>
 	<div class="panel-body">
-		<form class="" method="post" action="" role="form">
+		<form class="formulario" nctype="multipart/form-data" method="post" action="" role="form">
 			<div class="row">
 				<div class="col-sm-4 col-md-4 col-lg-4"></div>
 				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
 					<div class="thumbnail">
 						<img src="" alt="" style="width: 200px; height:200px;"><br>
-						<div class="caption">
+            <div class="caption">
 							<label class="btn btn-primary" for="my-file-selector">
-								<input id="my-file-selector" type="file" style="display:none;">
+								<input name="imagen" id="my-file-selector" type="file" style="display:none;">
 								Seleccionar imagen
 							</label>
 						</div>
