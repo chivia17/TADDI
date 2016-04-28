@@ -23,4 +23,5 @@ if($result = $conexion->query($query)){
 		echo '<script language="javascript">alert("No se ha contestado esta encuesta!"); window.location.href="../consultar_encuestas.php";</script>';
 	}
 }
+
 ?>

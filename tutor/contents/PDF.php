@@ -6,7 +6,7 @@ class PDF extends FPDF
   function Header()
 {
     $this->SetFont('Arial','I',38);
-    $this->Image('C:/xampp/htdocs/TADDI/img/header.png',0,0,210);
+    $this->Image('../img/header.png',0,0,210);
     $this->Cell(80);
     $this->Cell(30,50,'Carga Tutoria',10,0,'C');
 
@@ -17,7 +17,7 @@ class PDF extends FPDF
 {
   $this->SetY(-15);
   $this->SetFont('Times','I',12);
-  $this->Image('C:/xampp/htdocs/TADDI/img/footer.jpg',0,270,210);
+  $this->Image('../img/footer.jpg',0,270,210);
 }
 
 

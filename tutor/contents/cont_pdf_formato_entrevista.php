@@ -1,5 +1,6 @@
 <?php
-include'conexion.php';
+require_once("testPDF.php");
+/*include'conexion.php';
 include_once('PDF_Encuesta.php');
 $no_control= $_GET['no_control'];
 $estado = $_GET['estado'];
@@ -21,5 +22,8 @@ if($result = $conexion->query($query)){
 	else{
 		echo '<script language="javascript">alert("No se ha contestado esta encuesta!"); window.location.href="../consultar_encuestas.php";</script>';
 	}
-}
+}*/
+$nc=12120350;
+$test = new testPDF();
+$test -> testAser();
 ?>
