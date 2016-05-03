@@ -1,7 +1,7 @@
 <?php
 session_start();
 include'../contents/conexion.php';
-$nc = $_SESSION["nc"];
+$nc = $_GET["nc"];
 $conexion = conectar();
 $query = "SELECT * FROM testhabest WHERE nc='$nc'" or die("Error in the consult.." . mysqli_error($conexion)); ;
 $result = $conexion->query($query);

@@ -29,7 +29,7 @@ if(isset($_POST['noControl'])){
 		<h2><b>ENCUESTAS</b></h2>
 	</div>
 </div>
-<br><br>		
+<br><br>
 <form role="form" method="post" action = "consultar_encuestas.php">
 	<div class="row">
 		<div class="form-horizontal">
@@ -45,8 +45,8 @@ if(isset($_POST['noControl'])){
 		</div>
 	</div>
 <form/>
-<form role = "form" method = "post" action = ""> 
-	<hr>	
+<form role = "form" method = "post" action = "">
+	<hr>
 	<br>
 	<div class="row">
 		<div class="form-horizontal">
@@ -81,41 +81,41 @@ if(isset($_POST['noControl'])){
 						</tr>
 						<tr>
 					  		<td>Formato de entrevista</td>
-						  	<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?no_control=<?php echo $no_control;?>&estado=1"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+						  	<td class="text-center"><a href="../pdf/pdf_blanco_tutor.php?nc=<?php echo $no_control;?>&estado=0"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 						</tr>
 						<tr>
 							<td>Línea de vida</td>
-							<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?no_control=<?php echo $no_control;?>&estado=2"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+							<td class="text-center"><a href="../pdf/pdf_blanco_tutor.php?nc=<?php echo $no_control;?>&estado=1"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 						</tr>
 						<tr>
 							<td>Análisis FODA</td>
-							<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?no_control=<?php echo $no_control;?>&estado=3"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+							<td class="text-center"><a href="../pdf/pdf_blanco_tutor.php?nc=<?php echo $no_control;?>&estado=2"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 						</tr>
 						<tr>
 							<td>Encuesta sobre las Habilidades de Estudio</td>
-							<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?no_control=<?php echo $no_control;?>&estado=4"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+							<td class="text-center"><a href="../pdf/pdf_blanco_tutor.php?nc=<?php echo $no_control;?>&estado=3"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 						</tr>
 						<tr>
 							<td>Inventario sobre Estilos de Aprendizaje</td>
-							<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?no_control=<?php echo $no_control;?>&estado=5"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+							<td class="text-center"><a href="../pdf/pdf_blanco_tutor.php?nc=<?php echo $no_control;?>&estado=4"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 						</tr>
 						<tr>
 							<td>Test de Autoestima</td>
-							<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?no_control=<?php echo $no_control;?>&estado=6"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+							<td class="text-center"><a href="../pdf/pdf_blanco_tutor.php?nc=<?php echo $no_control;?>&estado=5"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 						</tr>
 						<tr>
 							<td>Test de Asertividad</td>
-							<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?no_control=<?php echo $no_control;?>&estado=7"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+							<td class="text-center"><a href="../pdf/pdf_blanco_tutor.php?nc=<?php echo $no_control;?>&estado=6"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 						</tr>
 						<tr>
 							<td>Rúbrica para evaluar el desempeño del tutor</td>
-							<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?no_control=<?php echo $no_control;?>&estado=8"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+							<td class="text-center"><a href="../pdf/pdf_blanco_tutor.php?nc=<?php echo $no_control;?>&estado=7"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 						</tr>
 	  				</table>
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="row">
 		<h4>Notas sobre las encuestas</h3>
 		<textarea class="form-control" rows="3"></textarea><br>
@@ -123,9 +123,6 @@ if(isset($_POST['noControl'])){
 			<button type="submit" class="btn btn-default">Guardar notas</button>
 		</div>
 	</div>
-	
-	
+
+
 </form>
-
-
-

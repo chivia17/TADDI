@@ -1,12 +1,12 @@
 <?php
 	ob_start();
-	$ruta = array('/vistas/anexo1.php',
-                '/vistas/anexo2.php',
-								'/vistas/anexo3.php',
-								'/vistas/anexo4.php',
-								'/vistas/anexo5.php',
-								'/vistas/anexo6.php',
-								'/vistas/anexo7.php'
+	$ruta = array('/vistas/anexo1t.php',
+                '/vistas/anexo2t.php',
+								'/vistas/anexo3t.php',
+								'/vistas/anexo4t.php',
+								'/vistas/anexo5t.php',
+								'/vistas/anexo6t.php',
+								'/vistas/anexo7t.php'
 							 );
     include(dirname(__FILE__).$ruta[$_GET['estado']]);
     //En una variable llamada $content se obtiene lo que tenga la ruta especificada

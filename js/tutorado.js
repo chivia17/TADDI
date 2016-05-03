@@ -121,7 +121,6 @@ function main(){
                               });
     });
 
-
     $('#grdHabilidades').click(function(){     //Boton Guardar Test Estilos Aprendizaje
       p1 = $('input:radio[name=hab01]:checked').val();
       p2 = $('input:radio[name=hab02]:checked').val();
@@ -148,6 +147,26 @@ function main(){
                                      p9 : p9, p10 : p10, p11 : p11, p12 : p12,
                                      p13 : p13, p14 : p14, p15 : p15, p16 : p16,
                                      p17 : p17, p18 : p18, p19 : p19, p20 : p20
+                                           },
+                 function(data){
+                                alert(data);
+                              });
+    });
+
+    $('#grdAutoestima').click(function(){     //Boton Guardar Test Autoestima
+      p1 = $('input:radio[name=auto01]:checked').val();
+      p2 = $('input:radio[name=auto02]:checked').val();
+      p3 = $('input:radio[name=auto03]:checked').val();
+      p4 = $('input:radio[name=auto04]:checked').val();
+      p5 = $('input:radio[name=auto05]:checked').val();
+      p6 = $('input:radio[name=auto06]:checked').val();
+      p7 = $('input:radio[name=auto07]:checked').val();
+      p8 = $('input:radio[name=auto08]:checked').val();
+      p9 = $('input:radio[name=auto09]:checked').val();
+      p10 = $('input:radio[name=auto10]:checked').val();
+      $.post("./contents/testAuto.php", {p1 : p1, p2 : p2, p3 : p3, p4 : p4,
+                                         p5 : p5, p6 : p6, p7 : p7, p8 : p8,
+                                     p9 : p9, p10 : p10
                                            },
                  function(data){
                                 alert(data);

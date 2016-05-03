@@ -1,7 +1,7 @@
 <?php
 session_start();
 include'../contents/conexion.php';
-$nc = $_SESSION["nc"];
+$nc = $_GET["nc"];
 $conexion = conectar();
 $query = "SELECT * FROM testaser WHERE nc='$nc'" or die("Error in the consult.." . mysqli_error($conexion)); ;
 $result = $conexion->query($query);
@@ -11,7 +11,6 @@ while($row = mysqli_fetch_array($result))
   $respuestas[$i] = $row["respuesta"];
   $i++;
  }
-
 ?>
 <!-- IMPORTANTE: El contenido de la etiqueta style debe estar entre comentarios de HTML -->
 <style>
@@ -52,13 +51,13 @@ while($row = mysqli_fetch_array($result))
     </page_header>
 
     <page_footer> <!-- Define el footer de la hoja -->
-		<table id="footer">
-            <tr class="fila">
-				<td>
-
-				</td>
-			</tr>
-        </table>
+      <table id="footer" style="width:100%">
+              <tr class="fila">
+  				<td>
+            <img src="../img/footer.jpg">
+  				</td>
+  			</tr>
+          </table>
     </page_footer>
 
     <!-- Define el cuerpo de la hoja -->
@@ -70,6 +69,8 @@ while($row = mysqli_fetch_array($result))
 		  </tr>
 	  </table>
 <div aling="left">
+
+
 	<table id="central"  >
 		<tr>
 			<td >
@@ -81,7 +82,7 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
               Descripcion
 						</td>
-            <td style="width:50%">
+            <td style="width:60%">
               Respuesta
             </td>
 					</tr>
@@ -92,8 +93,8 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
               En una reunión difícil, con un ambiente caldeado, soy capaz de hablar con confianza.
 						</td>
-            <td style="width:50%">
-              	<?php echo $respuestas[0];?>
+            <td style="width:60%">
+              <?php echo $respuestas[0];?>
             </td>
 					</tr>
 					<tr class="fila">
@@ -103,8 +104,8 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
               Si no estoy segura/o de una cosa, puedo pedir ayuda fácilmente.
 						</td>
-            <td style="width:50%">
-               	<?php echo $respuestas[1];?>
+            <td style="width:60%">
+             <?php echo $respuestas[1];?>
             </td>
 					</tr>
 					<tr class="fila">
@@ -114,8 +115,8 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
                Si alguna persona es injusta y agresiva, puedo controlar la situación con confianza.
 						</td>
-            <td style="width:50%">
-              	<?php echo $respuestas[2];?>
+            <td style="width:60%">
+             <?php echo $respuestas[2];?>
             </td>
 					</tr>
 					<tr class="fila">
@@ -125,9 +126,9 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
               Si alguna persona se muestra irónica conmigo o con otras, puedo responder sin agresividad.
 						</td>
-            <td style="width:50%">
+            <td style="width:60%">
+             <?php echo $respuestas[3];?>
             </td>
-            <?php echo $respuestas[3];?>
 					</tr>
           <tr class="fila">
 						<td style="width:5%">
@@ -136,8 +137,8 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
               Si creo que se están abusando de mí, soy capaz de denunciarlo sin alterarme.
 						</td>
-            <td style="width:50%">
-              	<?php echo $respuestas[4];?>
+            <td style="width:60%">
+             <?php echo $respuestas[4];?>
             </td>
 					</tr>
           <tr class="fila">
@@ -147,8 +148,8 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
              Si alguna persona me pide permiso para hacer algo que no me gusta, por ejemplo, fumar, puedo decirle que no sin sentirme culpable.
 						</td>
-            <td style="width:50%">
-             	<?php echo $respuestas[5];?>
+            <td style="width:60%">
+             <?php echo $respuestas[5];?>
             </td>
 					</tr>
           <tr class="fila">
@@ -158,8 +159,8 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
             Si alguna persona pide mi opinión sobre alguna cosa me siento bien dándosela, aunque no concuerde con la de los demás.
 						</td>
-            <td style="width:50%">
-             	<?php echo $respuestas[6];?>
+            <td style="width:60%">
+             <?php echo $respuestas[6];?>
             </td>
 					</tr>
           <tr class="fila">
@@ -169,8 +170,8 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
               Puedo conectar fácil y efectivamente con personas que considero importantes.
 						</td>
-            <td style="width:50%">
-            <?php echo $respuestas[7];?>
+            <td style="width:60%">
+             <?php echo $respuestas[7];?>
             </td>
 					</tr>
           <tr class="fila">
@@ -180,8 +181,8 @@ while($row = mysqli_fetch_array($result))
 						<td style="width:100%">
              Cuando encuentro defectos en una tienda o restaurante, soy capaz de exponerlos sin atacar a las otras personas y sin sentirme mal.
 						</td>
-            <td style="width:50%">
-            	<?php echo $respuestas[8];?>
+            <td style="width:60%">
+             <?php echo $respuestas[0];?>
             </td>
 					</tr>
 				</table>

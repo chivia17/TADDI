@@ -33,11 +33,11 @@
 		</tr>
 		<tr>
 			<td>Inventario sobre Estilos de Aprendizaje</td>
-			<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?estado=5"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+			<td class="text-center"><a href="../pdf/pdf_blanco.php?estado=4"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 		</tr>
 		<tr>
 			<td>Test de Autoestima</td>
-			<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?estado=6"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+			<td class="text-center"><a href="../pdf/pdf_blanco.php?estado=5"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 		</tr>
 		<tr>
 			<td>Test de Asertividad</td>
@@ -45,7 +45,7 @@
 		</tr>
 		<tr>
 			<td>Rúbrica para evaluar el desempeño del tutor</td>
-			<td class="text-center"><a href="contents/cont_pdf_formato_entrevista.php?estado=8"><span class="glyphicon glyphicon-eye-open"></span></a></td>
+			<td class="text-center"><a href="../pdf/pdf_blanco.php?estado=4"><span class="glyphicon glyphicon-eye-open"></span></a></td>
 		</tr>
 	</table>
 </div>
