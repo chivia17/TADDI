@@ -80,5 +80,16 @@ class OperacionesSQL{
      return $res;
    }
 
+
+     function verificaAnexo($nc,$idA){
+      $result= $this -> conexion -> query("SELECT * FROM anexo_lleno WHERE idAlumnos='$nc'
+        AND idAnexos='$idA'");
+        if( $result->num_rows > 0)
+           return 1;
+        else
+          return 0;
+
+     }
+
 }
 ?>

@@ -1,6 +1,8 @@
 <?php
 	ob_start();
-	$ruta = array('/vistas/anexo1t.php',
+	require_once ("../tutorado/contents/OperacionesSQL.php");
+	$ruta = array('',
+		            '/vistas/anexo1t.php',
                 '/vistas/anexo2t.php',
 								'/vistas/anexo3t.php',
 								'/vistas/anexo4t.php',
@@ -8,6 +10,9 @@
 								'/vistas/anexo6t.php',
 								'/vistas/anexo7t.php'
 							 );
+		$nc = $_GET["nc"];
+		$anexo = new OperacionesSQL();
+		if($anexo -> verificaAnexo($nc,$_GET['estado']) == 1){
     include(dirname(__FILE__).$ruta[$_GET['estado']]);
     //En una variable llamada $content se obtiene lo que tenga la ruta especificada
     //NOTA: Se usa ob_get_clean porque trae SOLO el contenido
@@ -32,4 +37,8 @@
         echo $e;
         exit;
     }
+	}
+	else {
+  echo "<script language='javascript'>alert('No se ha contestado esta encuesta!'); window.location.href='$_SERVER[HTTP_REFERER]';</script>";
+	}
 ?>

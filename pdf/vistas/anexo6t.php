@@ -1,6 +1,6 @@
 <?php
 session_start();
-include'../contents/conexion.php';
+//include'../contents/conexion.php';
 $nc = $_GET["nc"];
 $conexion = conectar();
 $query = "SELECT * FROM testauto WHERE nc='$nc'" or die("Error in the consult.." . mysqli_error($conexion)); ;
